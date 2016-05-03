@@ -1,0 +1,13 @@
+# MassiveLogs
+# Servei de generació massiva de ogs
+
+[Unit]
+Description=The MassiveLogs service
+
+[Service]
+Type=simple
+
+ExecStart=/var/tmp/massivelogs/bash/massivelogs.sh
+
+[Install]
+WantedBy=multi-user.target
