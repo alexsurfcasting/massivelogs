@@ -1,14 +1,12 @@
 #! /usr/bin/python
 
+#=============================IMPORTS===================================
+
 import sys
 import syslog
 import random
 
-ident = [	'apache', 
-			'sshd', 
-			'ftp'	]
-
-logoption = 0
+#============================CONSTANTS==================================
 
 FACILITIES = [	syslog.LOG_USER, 
 				syslog.LOG_KERN, 
@@ -32,17 +30,30 @@ PRIORITIES = [	syslog.LOG_INFO,
 				syslog.LOG_WARNING,
 				syslog.LOG_NOTICE,
 				syslog.LOG_DEBUG	]
+
+LOGOPTIONS = [	syslog.LOG_PID,
+				syslog.LOG_CONS,
+				syslog.LOG_NDELAY,
+				syslog.LOG_NOWAIT,
+				syslog.LOG_PERROR	]
+
 				
 MESSAGES = {	0: 'Message 0',
 				1: 'Message 1',
 				2: 'Message 2', 
 				3: 'Message 3'	}
+				
+#============================VARIABLES==================================
+			
+ident = sys.argv[1:]
 
+#============================MAIN PROGRAM===============================
 
 while True:
 	for log in ident:
 		for facilitie in FACILITIES:
 			for priority in PRIORITIES:
-				syslog.openlog(log, logoption, facilitie)
+				for logoption in LOGOPTIONS:
+					syslog.openlog(log, logoption, facilitie)
 		
-				syslog.syslog(priority, random.choice(MESSAGES))
+					syslog.syslog(priority, random.choice(MESSAGES))
