@@ -61,6 +61,7 @@ que us proporciona aquest respositori.
  Després, comprovar que podem entrar via navegador a la pàgina web que contenen els containers:
  
   > firefox localhost:8080 &disown
+  
   > firefox localhost:8081 &disown
   
  
