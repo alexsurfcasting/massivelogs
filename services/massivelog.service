@@ -1,5 +1,5 @@
 # MassiveLogs
-# Servei de generació massiva de ogs
+# Servei de generació massiva de logs
 
 [Unit]
 Description=The MassiveLogs service
