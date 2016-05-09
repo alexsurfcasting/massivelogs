@@ -41,6 +41,14 @@ que us proporciona aquest respositori.
   Aquesta ordre crea un container amb una imatge de fedora, que si no la tenim al nostre repositori local, veurem com la busca i la
   descarrega automàticament.
   
-  
-  
+4. Crear els containers que contenen l'apache amb l'script
+
+ > ./generateDockers.sh 5
+ 
+ On:
+ 
+ * *./generateDockers.sh* és el nom de l'script
+ * *5* és el número de containers que crearem
+ 
+
   
