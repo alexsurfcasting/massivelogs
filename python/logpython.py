@@ -45,7 +45,9 @@ MESSAGES = {	0: 'Message 0',
 				
 #============================VARIABLES==================================
 			
-ident = sys.argv[1:]
+#ident = sys.argv[1:]
+
+ident = ['httpd', 'vsftpd', 'docker']
 
 #============================MAIN PROGRAM===============================
 

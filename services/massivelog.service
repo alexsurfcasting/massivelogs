@@ -7,7 +7,8 @@ Description=The MassiveLogs service
 [Service]
 Type=simple
 
-ExecStart=/var/tmp/massivelogs/bash/massivelogs.sh
+PIDFile=/var/run/massivelog.pid
+ExecStart=/var/tmp/massivelogs/python/logpython.py
 
 [Install]
 WantedBy=multi-user.target
