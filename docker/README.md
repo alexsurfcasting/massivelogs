@@ -50,5 +50,19 @@ que us proporciona aquest respositori.
  * *./generateDockers.sh* és el nom de l'script
  * *5* és el número de containers que crearem
  
+5. Comprovar que els apaches dels containers funcionen adequadament
+
+ Primer, mirarem els ports oberts al nostre sistema:
+  
+  > nmap localhost
+  
+ Al fer aquesta ordre hauríen d'aparéixer els ports dels serveis configurats al docker (8080 i succesius).
+ 
+ Després, comprovar que podem entrar via navegador a la pàgina web que contenen els containers:
+ 
+  > firefox localhost:8080 &disown
+  > firefox localhost:8081 &disown
+  
+ 
 
   
