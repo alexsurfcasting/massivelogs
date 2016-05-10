@@ -6,6 +6,10 @@ RUN dnf -y install httpd
 
 # Creating placeholder file to be served by apache
 ADD index.html /var/www/html/index.html
+ADD sobremi.html /var/www/html/sobremi.html
+ADD contacte.html /var/www/html/contacte.html
+ADD altresprojectes.html /var/www/html/altresprojectes.html
+ADD css/style.css /var/www/html/css/style.css
 
 # We open 80 port, the default one for HTTP for Apache server to listen on
 EXPOSE 80
