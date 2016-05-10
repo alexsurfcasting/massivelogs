@@ -40,30 +40,72 @@ que us proporciona aquest respositori.
   
   Aquesta ordre crea un container amb una imatge de fedora, que si no la tenim al nostre repositori local, veurem com la busca i la
   descarrega automàticament.
+
+Per començar a crear els containers necessaris per a fer els logs d'Apache:
+
+4. Crear la imatge Apache
+
+  Al directori de treball adequat, en aquest cas dins el directori on hi ha el Dockerfile:
   
-4. Crear els containers que contenen l'apache amb l'script
+  > docker build -t 'img_httpd' .
+  
+  On:
+  
+  * *-t* és el nom que tindrà la nostra imatge
+  * *.* indica el Dockerfile
+  
+5. Crear els containers que contenen l'apache amb l'script
+ 
+  > ./generateDockers.sh 2 img_httpd
+  
+  On:
+  
+  * *./generateDocker* és el nom de l'script
+  * *2* és el número de containers a crear
+  * *img_httpd* és el nom de la imatge que farem servir per crear els containers
+  
+6. Iniciar els containers creats
 
- > ./generateDockers.sh 5
- 
- On:
- 
- * *./generateDockers.sh* és el nom de l'script
- * *5* és el número de containers que crearem
- 
-5. Comprovar que els apaches dels containers funcionen adequadament
+  En aquest cas, que hem creat dos containers:
+  
+  > docker start httpd2
+  
+  > docker start httpd3
+  
+  On:
+  
+  * *httpd2* i *httpd3* és el nom dels containers creats, va augmentant
+  el número segons creem més containers
+  
+7. Entrar dins els containers i canviar la directiva ServerName
 
- Primer, mirarem els ports oberts al nostre sistema:
+  Un cop tenim tots iniciats, haurem d'entrar dins i canviar dins del fitxer
+  */etc/httpd/conf/httpd.conf* la directiva ServerName a 172.17.0.2.X:80
+  
+  Exemple amb el primer container:
+  
+  > docker attach httpd3
+  
+  
+  > vi /etc/httpd/conf/httpd.conf
+  
+  > ServerName 172.17.0.2:80
+  
+8. Comprovar que els Apaches funcionen adequadament
+
+  Primer, mirarem els ports oberts al nostre sistema:
   
   > nmap localhost
   
- Al fer aquesta ordre hauríen d'aparéixer els ports dels serveis configurats al docker (8080 i succesius).
- 
- Després, comprovar que podem entrar via navegador a la pàgina web que contenen els containers:
- 
+  Al fer aquesta ordre hauríen d'aparéixer els ports dels serveis configurats al docker (8080 i succesius).
+  
+  Després, comprovar que podem entrar via navegador a la pàgina web que contenen:
+  
   > firefox localhost:8080 &disown
   
   > firefox localhost:8081 &disown
-  
+ 
+
  
 
   
