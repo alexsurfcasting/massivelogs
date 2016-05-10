@@ -2,16 +2,20 @@
 
 # Script que genera containers de Docker amb el servei httpd
 
-name='httpd'
+cont=2
+name='httpd'$cont
 proxy_port=8080
 apache_port=80
-image_name='alex/httpd'
-num_containers = int(sys.argv[1])
+num_containers=$1
+image_name=$2
 
-while num_containers<0:
+while [ $num_containers -gt 0 ]
   do
-    docker run --name httpd+1 -p proxy_port:apache_port -i image_name
+    docker create --name $name --log-driver=journald -p $proxy_port:$apache_port -it $image_name /bin/bash
     num_containers=$(($num_containers-1))
+    proxy_port=$((proxy_port+1))
+    cont=$(($cont+1))
+    name='httpd'$cont
   done
   
   
