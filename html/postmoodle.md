@@ -20,7 +20,7 @@ Per iniciar el servei:
 
 * Depurar el servei que genera logs
 
-* Aprofundir en el funciomanet d'**ab**
+* Aprofundir en el funcionament d'**ab**
 
 * Crear un script que generi peticions amb **ab**
 
