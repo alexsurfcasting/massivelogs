@@ -6,9 +6,9 @@ systemd. La podràs trobar clicant [aquí](https://fedoraproject.org/wiki/System
 
 ## Instruccions
 
-1.  Copiar el fitxer del servei a /lib/systemd/system
+1.  Copiar el fitxer del servei a /etc/systemd/system
 
-  > cp massivelog.service /lib/systemd/system/massivelog.service
+  > cp massivelog.service /etc/systemd/system/massivelog.service
   
 2.  Iniciar el servei per començar a generar logs de forma massiva
 
