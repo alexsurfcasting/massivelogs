@@ -1,5 +1,8 @@
 # GENERACIÓ MASSIVA DE LOGS
 
+   [![Docker](https://pbs.twimg.com/profile_images/378800000124779041/fbbb494a7eef5f9278c6967b6072ca3e_400x400.png)](http://docker.org/
+    licenses/by-nc-nd/3.0/)
+
 *Projecte ASIX 2016*
 
 **Títol**: Generació massiva de logs
