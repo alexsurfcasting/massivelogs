@@ -19,3 +19,6 @@ ADD run-apache.sh /run-apache.sh
 RUN chmod -v +x /run-apache.sh
 
 CMD ["/run-apache.sh"]
+
+RUN ln -sf /dev/stdout /var/log/httpd/acces_log
+RUN ln -sf /dev/stderr /var/log/httpd/error_log

@@ -23,3 +23,18 @@ L'ab és una eina utilitzada per testejar servidors Apache. Envia peticions mass
   * *-n* és el nombre de peticions (requests)
   * *-c* inidica les peticions concurrents
   * *http://192.168.2.49:8080/* és la URL a testejar
+
+### Ús de l'script
+
+Farem servir l'script per testejar el nostres apaches creats anteriorment als containers Docker
+
+Al directori de treball on ha de ser l'script:
+
+> ./massiveAb.sh 1000 50 8080
+
+On:
+
+* *./massiveAb.sh* és el nom de l'script
+* *1000* és el nombre de peticions
+* *50* indica el nombre de peticions concurrents
+* *8080* defineix el port sobre el qual fer les peticions

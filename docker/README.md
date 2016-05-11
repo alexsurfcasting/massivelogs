@@ -10,11 +10,11 @@ que us proporciona aquest respositori.
 
 1.  Instal·lar Docker
 
-  * Si tenim un sistema Fedora 20 o inferior:
+  * Si tenim un sistema Fedora 21 o inferior:
   
     > sudo yum install docker-io
   
-  * Si tenim un sistema Fedora 21 o superior:
+  * Si tenim un sistema Fedora 22 o superior:
   
     > sudo dnf install docker
     
@@ -43,7 +43,7 @@ que us proporciona aquest respositori.
 
 Per començar a crear els containers necessaris per a fer els logs d'Apache:
 
-4. Crear la imatge Apache
+1. Crear la imatge Apache
 
   Al directori de treball adequat, en aquest cas dins el directori on hi ha el Dockerfile:
   
@@ -54,7 +54,7 @@ Per començar a crear els containers necessaris per a fer els logs d'Apache:
   * *-t* és el nom que tindrà la nostra imatge
   * *.* indica el Dockerfile
   
-5. Crear els containers que contenen l'apache amb l'script
+2. Crear els containers que contenen l'apache amb l'script
  
   > ./generateDockers.sh 2 img_httpd
   
@@ -64,7 +64,7 @@ Per començar a crear els containers necessaris per a fer els logs d'Apache:
   * *2* és el número de containers a crear
   * *img_httpd* és el nom de la imatge que farem servir per crear els containers
   
-6. Iniciar els containers creats
+3. Iniciar els containers creats
 
   En aquest cas, que hem creat dos containers:
   
@@ -77,7 +77,7 @@ Per començar a crear els containers necessaris per a fer els logs d'Apache:
   * *httpd2* i *httpd3* és el nom dels containers creats, va augmentant
   el número segons creem més containers
   
-7. Entrar dins els containers i canviar la directiva ServerName
+4. Entrar dins els containers i canviar la directiva ServerName
 
   Un cop tenim tots iniciats, haurem d'entrar dins i canviar dins del fitxer
   */etc/httpd/conf/httpd.conf* la directiva ServerName a 172.17.0.2.X:80
@@ -91,7 +91,7 @@ Per començar a crear els containers necessaris per a fer els logs d'Apache:
   
   > ServerName 172.17.0.2:80
   
-8. Comprovar que els Apaches funcionen adequadament
+5. Comprovar que els Apaches funcionen adequadament
 
   Primer, mirarem els ports oberts al nostre sistema:
   

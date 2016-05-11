@@ -11,14 +11,14 @@
 **Objectiu**: Generar diferents tipus de logs massivament. Aquests logs seran útils
 per als companys amb els seus projectes, ja que necessitaran gran quantitat de logs.
 
-Eines:
+Eines utilitzades:
 
 *	Sistema **Fedora 20**
 *	Bash
 *	Python
 *	Docker
+*	Servei Apache (httpd)
+*	Apache Benchmark
 
-Docker s'utilitzará per crear diferents contenidors amb un servei, en aquest cas l'anomenat
-*apache* o *httpd*, que anirán "bombardejant" els ports del sistema amb peticions per tal d'obtenir
-els logs desitjats.
+
 
