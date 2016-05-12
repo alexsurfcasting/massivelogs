@@ -26,24 +26,24 @@ port4=8083
 
 # Container 1
 ab -n $number_req -c $number_conc http://192.168.2.49:$port1/
-ab -n $number_req -c $number_conc http://192.168.2.49:$port1/sobremi.html
-ab -n $number_req -c $number_conc http://192.168.2.49:$port1/contacte.html
-ab -n $number_req -c $number_conc http://192.168.2.49:$port1/altresprojectes.html
+#~ ab -n $number_req -c $number_conc http://192.168.2.49:$port1/sobremi.html
+#~ ab -n $number_req -c $number_conc http://192.168.2.49:$port1/contacte.html
+#~ ab -n $number_req -c $number_conc http://192.168.2.49:$port1/altresprojectes.html
 
 # Container 2
 ab -n $number_req -c $number_conc http://192.168.2.49:$port2/
-ab -n $number_req -c $number_conc http://192.168.2.49:$port2/sobremi.html
-ab -n $number_req -c $number_conc http://192.168.2.49:$port2/contacte.html
-ab -n $number_req -c $number_conc http://192.168.2.49:$port2/altresprojectes.html
+#~ ab -n $number_req -c $number_conc http://192.168.2.49:$port2/sobremi.html
+#~ ab -n $number_req -c $number_conc http://192.168.2.49:$port2/contacte.html
+#~ ab -n $number_req -c $number_conc http://192.168.2.49:$port2/altresprojectes.html
 
 # Container 3
 ab -n $number_req -c $number_conc http://192.168.2.49:$port3/
-ab -n $number_req -c $number_conc http://192.168.2.49:$port3/sobremi.html
-ab -n $number_req -c $number_conc http://192.168.2.49:$port3/contacte.html
-ab -n $number_req -c $number_conc http://192.168.2.49:$port3/altresprojectes.html
+#~ ab -n $number_req -c $number_conc http://192.168.2.49:$port3/sobremi.html
+#~ ab -n $number_req -c $number_conc http://192.168.2.49:$port3/contacte.html
+#~ ab -n $number_req -c $number_conc http://192.168.2.49:$port3/altresprojectes.html
 
 # Container 4
 ab -n $number_req -c $number_conc http://192.168.2.49:$port4/
-ab -n $number_req -c $number_conc http://192.168.2.49:$port4/sobremi.html
-ab -n $number_req -c $number_conc http://192.168.2.49:$port4/contacte.html
-ab -n $number_req -c $number_conc http://192.168.2.49:$port4/altresprojectes.html
+#~ ab -n $number_req -c $number_conc http://192.168.2.49:$port4/sobremi.html
+#~ ab -n $number_req -c $number_conc http://192.168.2.49:$port4/contacte.html
+#~ ab -n $number_req -c $number_conc http://192.168.2.49:$port4/altresprojectes.html
