@@ -26,15 +26,17 @@ L'ab és una eina utilitzada per testejar servidors Apache. Envia peticions mass
 
 ### Ús de l'script
 
-Farem servir l'script per testejar el nostres apaches creats anteriorment als containers Docker
+Farem servir l'script per testejar el nostres apaches creats anteriorment als containers Docker.
 
 Al directori de treball on ha de ser l'script:
 
-> ./massiveAb.sh 1000 50 8080
+> ./massiveAb.sh 
+
+**Nota**: En cas de voler fer servir un altre port, caldrà editar dins l'script
+la variable corresponent.
+
+>	*port1=8080*
 
 On:
 
-* *./massiveAb.sh* és el nom de l'script
-* *1000* és el nombre de peticions
-* *50* indica el nombre de peticions concurrents
-* *8080* defineix el port sobre el qual fer les peticions
+*	*8080* serà on posarem el número de port que volguem atacar
