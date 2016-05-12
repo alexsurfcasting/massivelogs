@@ -2,17 +2,19 @@
 
 L'ab és una eina utilitzada per testejar servidors Apache. Envia peticions massivament a la URL del servidor que li passem.
 
+Pertany al paquet d'utilitats *httpd-tools*.
+
 ## Instruccions 
 
 ### Ús simple i directe de la ordre
 
 1.  Primer, comprovar que està instal·lat el paquet.
 
-  > rpm -ql ab
+  > rpm -ql httpd-tools
 
   Si no està, l'instal·lem
   
-  > sudo dnf install ab
+  > sudo dnf install httpd-tools
   
 2. Una vegada tenim la utilitat **ab**, procedim a fer les peticions al servidor que volguem.
 
