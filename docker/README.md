@@ -61,11 +61,11 @@ Per començar a crear els containers necessaris per a fer els logs d'Apache:
  
  * Iniciar-los i que quedin en segon pla sense poder interactuar-hi, d'aquesta manera es poden engegar tots 4 en una sola ordre.
  
-  > docker start httpd{2..5}
+   > docker start httpd{2..5}
 
-* Inciar-los en primer pla, d'aquesta manera podrem veure els logs que es generen ja que es mostraran per stdout del cotainer.
+ * Iniciar-los en primer pla, d'aquesta manera podrem veure els logs que es generen ja que es mostraran per stdout del cotainer.
 
-  > docker start -a httpd2
+   > docker start -a httpd2
  
 
 
