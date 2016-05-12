@@ -23,7 +23,7 @@ Pertany al paquet d'utilitats *httpd-tools*.
 2. Una vegada tenim la utilitat **ab**, procedim a fer les peticions al servidor que volguem.
 
       ```
-       $ ab -n 1000 -c 20 http://192.168.2.49:8080/
+      $ ab -n 1000 -c 20 http://192.168.2.49:8080/
       ```
       
   On:
