@@ -19,7 +19,7 @@ Pertany al paquet d'utilitats *httpd-tools*.
       ```
        $ sudo dnf install httpd-tools
       ```
-  
+      
 2. Una vegada tenim la utilitat **ab**, procedim a fer les peticions al servidor que volguem.
 
       ```
