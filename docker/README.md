@@ -12,7 +12,9 @@ que us proporciona aquest respositori.
 
   * Si tenim un sistema Fedora 21 o inferior:
   
-    > sudo yum install docker-io
+  ```
+   $ sudo yum install docker-io
+  ```
   
   * Si tenim un sistema Fedora 22 o superior:
   
