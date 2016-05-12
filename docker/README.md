@@ -11,15 +11,16 @@ que us proporciona aquest respositori.
 1.  Instal·lar Docker
 
   * Si tenim un sistema Fedora 21 o inferior:
-  
-  ```
-   $ sudo yum install docker-io
-  ```
+ 
+    ```
+    $ sudo yum install docker-io
+    ```
   
   * Si tenim un sistema Fedora 22 o superior:
   
-    > sudo dnf install docker
-    
+   ```
+    $ sudo dnf install docker
+   ``` 
 
 2.  Iniciar el servei
 
