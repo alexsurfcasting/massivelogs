@@ -18,9 +18,9 @@ que us proporciona aquest respositori.
   
   * Si tenim un sistema Fedora 22 o superior:
   
-   ```
-    $ sudo dnf install docker
-   ``` 
+    ```
+     $ sudo dnf install docker
+    ``` 
 
 2.  Iniciar el servei
 
