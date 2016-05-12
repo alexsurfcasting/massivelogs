@@ -10,7 +10,9 @@ Pertany al paquet d'utilitats *httpd-tools*.
 
 1.  Primer, comprovar que està instal·lat el paquet.
 
-  > rpm -ql httpd-tools
+      ```
+        $ rpm -ql httpd-tools
+      ```
 
   Si no està, l'instal·lem
   
