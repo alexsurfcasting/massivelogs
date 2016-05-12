@@ -26,21 +26,28 @@ que us proporciona aquest respositori.
 
   * Per activar el servei:
   
-    > sudo systemctl start docker
+    ```
+     $ sudo systemctl start docker
+    ```
   
   * Per comprovar que està activat:
   
-    > sudo systemctl status docker
+    ```
+     $ sudo systemctl status docker
+    ```
     
   * Si volem que s'activi cada vegada que arranquem l'equip:
   
-    > sudo systemctl enable docker
-    
+    ```
+     $ sudo systemctl enable docker
+    ```
 
 3. Crear el nostre primer container
 
-  > docker run -it fedora /bin/bash
-  
+    ```
+     $ docker run -it fedora /bin/bash
+    ```
+    
   Aquesta ordre crea un container amb una imatge de fedora, que si no la tenim al nostre repositori local, veurem com la busca i la
   descarrega automàticament.
 
@@ -50,25 +57,33 @@ Per començar a crear els containers necessaris per a fer els logs d'Apache:
 
   Al directori de treball adequat, en aquest cas dins el directori on hi ha el Dockerfile:
   
-  > ./buildImage.sh
-  
+    ```
+     $ ./buildImage.sh
+    ```
+    
   Aquest script crea la imatge necessària per fer els containers.
   
 2. Crear els containers que contenen l'apache amb l'script
- 
-  > ./createContainer.sh
 
+    ``` 
+     $ ./createContainer.sh
+    ```
+    
 3. Iniciar els containers creats
 
  Per iniciar els containers tenim dues ocpions.
  
  * Iniciar-los i que quedin en segon pla sense poder interactuar-hi, d'aquesta manera es poden engegar tots 4 en una sola ordre.
  
-   > docker start httpd{2..5}
-
+     ```
+      $ docker start httpd{2..5}
+     ```
+     
  * Iniciar-los en primer pla, d'aquesta manera podrem veure els logs que es generen ja que es mostraran per stdout del cotainer.
 
-   > docker start -a httpd2
+     ```
+      $ docker start -a httpd2
+     ```
  
 
 
