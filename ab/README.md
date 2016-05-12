@@ -11,17 +11,21 @@ Pertany al paquet d'utilitats *httpd-tools*.
 1.  Primer, comprovar que està instal·lat el paquet.
 
       ```
-        $ rpm -ql httpd-tools
+       $ rpm -ql httpd-tools
       ```
 
   Si no està, l'instal·lem
   
-  > sudo dnf install httpd-tools
+      ```
+       $ sudo dnf install httpd-tools
+      ```
   
 2. Una vegada tenim la utilitat **ab**, procedim a fer les peticions al servidor que volguem.
 
-  > ab -n 1000 -c 20 http://192.168.2.49:8080/
-  
+      ```
+       $ ab -n 1000 -c 20 http://192.168.2.49:8080/
+      ```
+      
   On:
   * *ab* és la pròpia ordre Apache Benchmark
   * *-n* és el nombre de peticions (requests)
@@ -34,7 +38,9 @@ Farem servir l'script per testejar el nostres apaches creats anteriorment als co
 
 Al directori de treball on ha de ser l'script:
 
-> ./massiveAb.sh 
+```
+$ ./massiveAb.sh 
+```
 
 **Nota**: En cas de voler fer servir un altre port, caldrà editar dins l'script
 la variable corresponent.
