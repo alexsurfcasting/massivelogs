@@ -8,7 +8,9 @@ La utilitat wget permet descarregar els arxius d'una web. És una eina molt exte
 
 * Per tal de descarregar la pàgina principal d'una web:
 
-  > wget http://192.168.2.49:8080
+	```
+		$ wget http://192.168.2.49:8080
+	```
 
   On:
     * *wget* és la pròpia ordre
@@ -16,8 +18,10 @@ La utilitat wget permet descarregar els arxius d'una web. És una eina molt exte
     
 * Per descarregar totes les pàgines d'una web
 
-  > wget -r http://192.168.2.49:8080
-  
+	```
+		$ wget -r http://192.168.2.49:8080
+	```
+	
   On:
     * *wget* és la pròpia ordre
     * *-r* opció recursiva
@@ -25,6 +29,7 @@ La utilitat wget permet descarregar els arxius d'una web. És una eina molt exte
 
 * Si volem fer servir l'script, simplement, al directori de treball
 
-  > ./massiveWget.sh 
-  
+	```
+		$ ./massiveWget.sh 
+	```
   
