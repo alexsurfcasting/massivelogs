@@ -8,6 +8,14 @@ creació massiva, és a dir, grans quantitats, de logs.
 En aquesta guía trobarem els diferents mètodes explicats un a un, per tal 
 que l'usuari faci servir el que trobi més adhient a les seves necessitats.
 
+Cal tenir en compte que no tots els logs generats es veuran per pantalla
+a la sortida estàndar (stdout). Només veurem per aquesta sortida els logs més *crítics*.
+Per veure la totalitat de logs generats, és recomanable, en una altre terminal fer:
+
+```
+	$ journalctl -f
+```
+
 ## Començament
 
 Primer de tot, haurem de descarregar el [repositori](https://github.com/alexsurfcasting/massivelogs) 
@@ -51,16 +59,19 @@ Un cop al directori, executarem l'script.
 		$ ./massivePython.py
 	```
 	
-En aquest punt, es començaran a generar logs massivament, en gran quantitat
-i molt ràpid. Quan creiem que ja tenim suficient, ja podrem procedir
-a parar el script.
+	En aquest punt, es començaran a generar logs massivament, en gran quantitat
+	i molt ràpid. Quan creiem que ja tenim suficient, ja podrem procedir
+	a parar el script.
+
+3.	Aturar l'script
 
 	```
-		^C
+		$ ^C
 	```
+
+### Mètode bash	
 	
-### Mètode bash
+### Mètode service
 
-ídem que l'anterior, però aquest script està fet en llenguatge bash.
-
-###
+Aquest mètode és una mica més complexe, tracta d'un servei que en arrencar començara a generar logs
+fins que el parem. Funciona gràcies a systemd
