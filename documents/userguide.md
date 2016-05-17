@@ -59,4 +59,8 @@ a parar el script.
 		^C
 	```
 	
+### Mètode bash
 
+ídem que l'anterior, però aquest script està fet en llenguatge bash.
+
+###
