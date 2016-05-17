@@ -139,4 +139,34 @@ Al estar al directori de treball
 	
 ### Mètode Docker
 
+El mètode Docker és el més complexe de tots, i a més a més, té dintre seu alguns *submètodes*. Per tal d'entendre
+i fer servir correctament aquest mètode, es recomanable que llegim la [documentació oficial](https://www.docker.com).
 
+També, sino tenim instal·lat Docker, l'haurem d'instal·lar. Per tant, com en el paràgraf anterior, és recomanable mirar
+la documentació, en aquest cas la d'[instal·lació](https://docs.docker.com/engine/installation/linux/fedora/).
+
+Tot i això, els passos per instalar·lo son:
+
+1.	Si tenim un sistema Fedora 21 o inferior
+
+	```
+		$ sudo yum install docker-io
+	```
+
+2.	Si tenim un sistema Fedora 22 o superior
+
+	```
+		$ sudo dnf install docker
+	```
+
+Per començar a fer-lo servir també fa falta iniciar el servei
+
+```
+	$ sudo systemctl start docker
+```
+
+Per tenir-lo actiu només arrencar el sistema
+
+```
+	$ sudo systemctl enable docker
+```
