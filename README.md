@@ -1,8 +1,5 @@
 # GENERACIÓ MASSIVA DE LOGS
 
-   [![Docker](https://pbs.twimg.com/profile_images/378800000124779041/fbbb494a7eef5f9278c6967b6072ca3e_400x400.png)](http://docker.org/
-    licenses/by-nc-nd/3.0/)
-
 *Projecte ASIX 2016*
 
 **Títol**: Generació massiva de logs
@@ -23,5 +20,9 @@ Eines utilitzades:
 *	Servei Apache (httpd)
 *	Apache Benchmark
 
+[![Docker](http://s32.postimg.org/ejjpvqlqp/docker.png)](https://docker.org/)
+[![Apache](http://s32.postimg.org/gm2ksyd8x/apache_logo.png)](https://httpd.apache.org/)
+[![Fedora](http://s32.postimg.org/505w7wpsh/Fedora_logo.png)](https://getfedora.org/es/)
+[![Python](http://s32.postimg.org/kxw8f2qhd/python_logo.png)](https://www.python.org/)
 
 
