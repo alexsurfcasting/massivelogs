@@ -241,6 +241,53 @@ Quan estem dintre del directori [apache](https://github.com/alexsurfcasting/mass
 		$ docker exec -it httpd2 /bin/bash
 	```
 	
+Després d'aquestes ordres, tindrem els containers engegats (en segon o primer pla segons les nostres preferències) amb un servei Apache en
+funcionament i proporcionant una pàgina web.
 
+Un cop arribat a aquest punt, tenim dos mètodes per fer peticions massives als containers i generar els logs.
+
+#### Mètode ab
+
+Primer de tot, entrarem al directori de treball [ab](https://github.com/alexsurfcasting/massivelogs/tree/master/ab) on trobarem l'script per generar les peticions.
+
+```
+	$ cd ab
+```
+
+Un cop al directori:
+
+1.	Donar permisos d'execució a l'script
+
+	```
+		$ chmod +x massiveAb.sh
+	```
+
+2.	Executar l'script
+
+	```
+		$ ./massiveAb.sh
+	```
 	
+	***Nota***: Com en altres scripts, en aquest també es poden editar diferents directives per adaptar-lo a les nostres necessitats.
+	
+	*	Per variar el número de peticions, canviarem la directiva *number_req*
+	
+		> number_req=100
+
+	* 	Per canviar el número de peticions concurrents, modificarem la directiva *number_conc*
+	
+		> number_conc=20
+
+	*	Per modificar la IP on farem les peticions, substituirem la directiva *ip*
+	
+		> ip=192.168.2.49
+
+	*	Per fer servir uns altres ports, modificarem les directives *port1, port2...* segons el número de containers que haguem creat anteriorment
+	
+		> port1=8080
+		> port2=8081
+		> port3=8082
+		> port4=8083
+
+
 	
