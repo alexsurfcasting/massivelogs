@@ -170,3 +170,54 @@ Per tenir-lo actiu només arrencar el sistema
 ```
 	$ sudo systemctl enable docker
 ```
+
+Una vegada instal·lat i actiu el sistema, cja podrem començar a crear la imatges i els containers d'Apache, preparats
+per a la generació de logs.
+
+Abans de tots, per tal de crear les imatges i els containers, ens posarem al directori de treball adequat, on trobarem
+aquests fitxers i el Dockerfile.
+
+```
+	$ cd apache
+```
+
+Quan estem dintre del directori [apache](https://github.com/alexsurfcasting/massivelogs/tree/master/docker/apache)
+
+1.	Donar permisos d'execució als scripts
+
+	```
+		$ chmod +x buildImage.sh
+		$ chmod +x createContainer.sh
+	```
+	
+2.	Crear la imatge a partir de la qual crearem els containers
+
+	```
+		$ ./buildImage.sh
+	```
+	
+	***Nota***: A l'script *buildImage.sh*, si volem canviar el nom de la imatge creada, només
+	caldrà modificar la directiva *image_name*.
+	
+	> image_name='alex/httpd'
+	
+3.	Crear els containers
+
+	```
+		$ ./createContainer.sh
+	```
+
+	***Nota***: A l'script *createContainer.sh* podrem canviar varies directives per crear els containers segons les nostres necessitats.
+	
+	*	Per modificar el número de containers a crear, canviarem la directiva *num_containers*
+	
+		> num_containers=4
+
+	*	Per modificar la imatge a fer servir, canviarem la directiva *image_name*
+	
+		> image_name=alex/httpd
+
+	*	Si volem fer servir un altre port on replicar l'Apache, modificarem la directiva *proxy_port*
+	
+		> proxy_port=8080
+
