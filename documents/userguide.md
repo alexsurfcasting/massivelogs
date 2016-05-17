@@ -39,7 +39,7 @@ els diferents mètodes que trobem en aquest repositori.
 
 Aquest mètode és el mes senzill. 
 
-Primer, haurem d'entrar dins el directori [python](https://github.com/alexsurfcasting/massivelogs/tree/master/python)
+Primer, haurem d'entrar dins el directori [python](https://github.com/alexsurfcasting/massivelogs/tree/master/python).
 
 ```
 	$ cd python
@@ -47,13 +47,13 @@ Primer, haurem d'entrar dins el directori [python](https://github.com/alexsurfca
 
 Un cop al directori, executarem l'script.
 
-1.	Donar permisos d'execució
+1.	Donar permisos d'execució.
 
 	```
 		$ chmod +x massivePython.py
 	```
 	
-2.	Executar l'script
+2.	Executar l'script.
 
 	```
 		$ ./massivePython.py
@@ -63,7 +63,7 @@ Un cop al directori, executarem l'script.
 	i molt ràpid. Quan creiem que ja tenim suficient, ja podrem procedir
 	a parar el script.
 
-3.	Aturar l'script
+3.	Aturar l'script.
 
 	```
 		$ ^C
@@ -73,27 +73,27 @@ Un cop al directori, executarem l'script.
 
 ídem que el mètode anterior, però en aquest cas l'script està desenvolupat en bash.
 
-Per començar, entrar dins el directori [bash](https://github.com/alexsurfcasting/massivelogs/tree/master/bash)
+Per començar, entrar dins el directori [bash](https://github.com/alexsurfcasting/massivelogs/tree/master/bash).
 
 ```
 	$ cd bash
 ```
 
-Quan ja estem dintre del directori
+Quan ja estem dintre del directori:
 
-1.	Donar permisos d'execució
+1.	Donar permisos d'execució.
 
 	```
 		$ chmod +x massiveBash.sh
 	```
 
-2.	Engegar script
+2.	Engegar script.
 
 	```
 		$ ./massiveBash.sh
 	```
 
-3.	Aturar
+3.	Aturar.
 
 	```
 		$ ^C
@@ -105,33 +105,33 @@ Aquest mètode és una mica més complexe, tracta d'un servei que en arrencar co
 fins que el parem. Funciona gràcies a systemd ... **EXPLICAR SYSTEMD**
 
 Com a tots els altres mètodes, per començar a treballar haurem d'entrar al directori pertinent,
-en aquest cas [service](https://github.com/alexsurfcasting/massivelogs/tree/master/service)
+en aquest cas [service](https://github.com/alexsurfcasting/massivelogs/tree/master/service).
 
 ```
 	$ cd service
 ```
 
-Al estar al directori de treball
+Al estar al directori de treball:
 
-1.	Primer, haurem de copiar el fitxer del servei al directori on es troben els *.service* del sistema
+1.	Primer, haurem de copiar el fitxer del servei al directori on es troben els *.service* del sistema.
 
 	```
 		$ cp massivelog.service /etc/systemd/system/massivelog.service
 	```
 	
-2.	Un cop copiat, iniciar el servei per començar a generar logs
+2.	Un cop copiat, iniciar el servei per començar a generar logs.
 
 	```
 		$ sudo systemctl start massivelog.service
 	```
 	
-3. 	Quan créiem convenient o estem ja satisfets amb la quanitat de logs generada
+3. 	Quan créiem convenient o estem ja satisfets amb la quanitat de logs generada.
 
 	```
 		$ sudo systemctl stop massivelog.service
 	```
 
-4.	En cas de que volguem tenir sempre iniciat el servei al arrencar el sistema
+4.	En cas de que volguem tenir sempre iniciat el servei al arrencar el sistema.
 
 	```
 		$ sudo systemctl enable massivelog.service
@@ -147,25 +147,25 @@ la documentació, en aquest cas la d'[instal·lació](https://docs.docker.com/en
 
 Tot i això, els passos per instalar·lo son:
 
-1.	Si tenim un sistema Fedora 21 o inferior
+1.	Si tenim un sistema Fedora 21 o inferior.
 
 	```
 		$ sudo yum install docker-io
 	```
 
-2.	Si tenim un sistema Fedora 22 o superior
+2.	Si tenim un sistema Fedora 22 o superior.
 
 	```
 		$ sudo dnf install docker
 	```
 
-Per començar a fer-lo servir també fa falta iniciar el servei
+Per començar a fer-lo servir també fa falta iniciar el servei.
 
 ```
 	$ sudo systemctl start docker
 ```
 
-Per tenir-lo actiu només arrencar el sistema
+Per tenir-lo actiu només arrencar el sistema.
 
 ```
 	$ sudo systemctl enable docker
@@ -181,16 +181,16 @@ aquests fitxers i el Dockerfile.
 	$ cd apache
 ```
 
-Quan estem dintre del directori [apache](https://github.com/alexsurfcasting/massivelogs/tree/master/docker/apache)
+Quan estem dintre del directori [apache](https://github.com/alexsurfcasting/massivelogs/tree/master/docker/apache):
 
-1.	Donar permisos d'execució als scripts
+1.	Donar permisos d'execució als scripts.
 
 	```
 		$ chmod +x buildImage.sh
 		$ chmod +x createContainer.sh
 	```
 	
-2.	Crear la imatge a partir de la qual crearem els containers
+2.	Crear la imatge a partir de la qual crearem els containers.
 
 	```
 		$ ./buildImage.sh
@@ -201,7 +201,7 @@ Quan estem dintre del directori [apache](https://github.com/alexsurfcasting/mass
 	
 	> image_name='alex/httpd'
 	
-3.	Crear els containers
+3.	Crear els containers.
 
 	```
 		$ ./createContainer.sh
@@ -209,15 +209,15 @@ Quan estem dintre del directori [apache](https://github.com/alexsurfcasting/mass
 
 	***Nota***: A l'script *createContainer.sh* podrem canviar varies directives per crear els containers segons les nostres necessitats.
 	
-	*	Per modificar el número de containers a crear, canviarem la directiva *num_containers*
+	*	Per modificar el número de containers a crear, canviarem la directiva *num_containers*.
 	
 		> num_containers=4
 
-	*	Per modificar la imatge a fer servir, canviarem la directiva *image_name*
+	*	Per modificar la imatge a fer servir, canviarem la directiva *image_name*.
 	
 		> image_name=alex/httpd
 
-	*	Si volem fer servir un altre port on replicar l'Apache, modificarem la directiva *proxy_port*
+	*	Si volem fer servir un altre port on replicar l'Apache, modificarem la directiva *proxy_port*.
 	
 		> proxy_port=8080
 
@@ -227,7 +227,7 @@ Quan estem dintre del directori [apache](https://github.com/alexsurfcasting/mass
 		$ docker start httpd{2..5}
 	```
 	
-	***Nota***: El noms dels containers creats són correlatius (*httpd2, httpd3, httpd4...*)
+	***Nota***: El noms dels containers creats són correlatius (*httpd2, httpd3, httpd4...*).
 	
 5.	També tenim l'opció d'iniciar containers en primer pla per tal de poder veure els logs per la seva sortida estàndar. En aquest cas, els haurem d'iniciar un a un.
 
@@ -235,7 +235,7 @@ Quan estem dintre del directori [apache](https://github.com/alexsurfcasting/mass
 		$ docker start -a httpd2
 	```
 	
-6.	En cas de voler entrar al container en mode interactiu
+6.	En cas de voler entrar al container en mode interactiu.
 
 	```
 		$ docker exec -it httpd2 /bin/bash
@@ -256,13 +256,13 @@ Primer de tot, entrarem al directori de treball [ab](https://github.com/alexsurf
 
 Un cop al directori:
 
-1.	Donar permisos d'execució a l'script
+1.	Donar permisos d'execució a l'script.
 
 	```
 		$ chmod +x massiveAb.sh
 	```
 
-2.	Executar l'script
+2.	Executar l'script.
 
 	```
 		$ ./massiveAb.sh
@@ -270,19 +270,19 @@ Un cop al directori:
 	
 	***Nota***: Com en altres scripts, en aquest també es poden editar diferents directives per adaptar-lo a les nostres necessitats.
 	
-	*	Per variar el número de peticions, canviarem la directiva *number_req*
+	*	Per variar el número de peticions, canviarem la directiva *number_req*.
 	
 		> number_req=100
 
-	* 	Per canviar el número de peticions concurrents, modificarem la directiva *number_conc*
+	* 	Per canviar el número de peticions concurrents, modificarem la directiva *number_conc*.
 	
 		> number_conc=20
 
-	*	Per modificar la IP on farem les peticions, substituirem la directiva *ip*
+	*	Per modificar la IP on farem les peticions, substituirem la directiva *ip*.
 	
 		> ip=192.168.2.49
 
-	*	Per fer servir uns altres ports, modificarem les directives *port1, port2...* segons el número de containers que haguem creat anteriorment
+	*	Per fer servir uns altres ports, modificarem les directives *port1, port2...* segons el número de containers que haguem creat anteriorment.
 	
 		> port1=8080
 		> port2=8081
@@ -291,7 +291,7 @@ Un cop al directori:
 
 #### Mètode wget
 
-Per començar, entrarem al directori de treball [wget](https://github.com/alexsurfcasting/massivelogs/tree/master/wget)
+Per començar, entrarem al directori de treball [wget](https://github.com/alexsurfcasting/massivelogs/tree/master/wget).
 
 ```
 	$ cd wget
@@ -299,12 +299,12 @@ Per començar, entrarem al directori de treball [wget](https://github.com/alexsu
 
 Un cop dintre del directori:
 
-1.	Donar permisos d'execució a l'script
+1.	Donar permisos d'execució a l'script.
 
 	```
 		$ chmod +x massiveWget.sh
 	```
-2.	Executar
+2.	Executar.
 
 	```
 		$ ./massiveWget.sh
