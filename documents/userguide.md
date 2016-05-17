@@ -221,3 +221,26 @@ Quan estem dintre del directori [apache](https://github.com/alexsurfcasting/mass
 	
 		> proxy_port=8080
 
+4.	Iniciar els containers, si deixem els script sense modificar cap directiva inicarem 4 containers.
+
+	```
+		$ docker start httpd{2..5}
+	```
+	
+	***Nota***: El noms dels containers creats són correlatius (*httpd2, httpd3, httpd4...*)
+	
+5.	També tenim l'opció d'iniciar containers en primer pla per tal de poder veure els logs per la seva sortida estàndar. En aquest cas, els haurem d'iniciar un a un.
+
+	```
+		$ docker start -a httpd2
+	```
+	
+6.	En cas de voler entrar al container en mode interactiu
+
+	```
+		$ docker exec -it httpd2 /bin/bash
+	```
+	
+
+	
+	
