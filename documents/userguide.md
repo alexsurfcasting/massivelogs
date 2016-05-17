@@ -114,3 +114,29 @@ en aquest cas [service](https://github.com/alexsurfcasting/massivelogs/tree/mast
 Al estar al directori de treball
 
 1.	Primer, haurem de copiar el fitxer del servei al directori on es troben els *.service* del sistema
+
+	```
+		$ cp massivelog.service /etc/systemd/system/massivelog.service
+	```
+	
+2.	Un cop copiat, iniciar el servei per començar a generar logs
+
+	```
+		$ sudo systemctl start massivelog.service
+	```
+	
+3. 	Quan créiem convenient o estem ja satisfets amb la quanitat de logs generada
+
+	```
+		$ sudo systemctl stop massivelog.service
+	```
+
+4.	En cas de que volguem tenir sempre iniciat el servei al arrencar el sistema
+
+	```
+		$ sudo systemctl enable massivelog.service
+	```
+	
+### Mètode Docker
+
+
