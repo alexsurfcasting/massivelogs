@@ -1,16 +1,16 @@
 FROM fedora
-MAINTAINER alexsurfcasting 
+MAINTAINER http://fedoraproject.org/wiki/Cloud
 
 # Updating dependencies, installing Apache and cleaning dnf caches to reduce container size
-RUN dnf -y update && dnf -y install httpd && dnf clean all
-
-# Installing unzip
-RUN dnf -y install unzip
+RUN dnf -y install httpd
 
 # Creating placeholder file to be served by apache
+#ADD index.html /var/www/html/index.html
+#ADD sobremi.html /var/www/html/sobremi.html
+#ADD contacte.html /var/www/html/contacte.html
+#ADD altresprojectes.html /var/www/html/altresprojectes.html
+#ADD css/style.css /var/www/html/css/style.css
 ADD webtest.zip /var/www/html/
-RUN unzip /var/www/html/webtest.zip -d /var/www/html/
-RUN rm /var/www/html/webtest.zip
 
 # We open 80 port, the default one for HTTP for Apache server to listen on
 EXPOSE 80
@@ -21,6 +21,10 @@ RUN chmod -v +x /run-apache.sh
 
 CMD ["/run-apache.sh"]
 
-# Create symbolic links to send logs to standard output
 RUN ln -sf /dev/stdout /var/log/httpd/access_log
 RUN ln -sf /dev/stderr /var/log/httpd/error_log
+
+RUN dnf -y install unzip
+
+#RUN unzip /var/www/html/webtest.zip
+#RUN rm /var/www/html/webtest.zip
