@@ -70,8 +70,47 @@ Un cop al directori, executarem l'script.
 	```
 
 ### Mètode bash	
-	
+
+ídem que el mètode anterior, però en aquest cas l'script està desenvolupat en bash.
+
+Per començar, entrar dins el directori [bash](https://github.com/alexsurfcasting/massivelogs/tree/master/bash)
+
+```
+	$ cd bash
+```
+
+Quan ja estem dintre del directori
+
+1.	Donar permisos d'execució
+
+	```
+		$ chmod +x massiveBash.sh
+	```
+
+2.	Engegar script
+
+	```
+		$ ./massiveBash.sh
+	```
+
+3.	Aturar
+
+	```
+		$ ^C
+	```
+
 ### Mètode service
 
 Aquest mètode és una mica més complexe, tracta d'un servei que en arrencar començara a generar logs
-fins que el parem. Funciona gràcies a systemd
+fins que el parem. Funciona gràcies a systemd ... **EXPLICAR SYSTEMD**
+
+Com a tots els altres mètodes, per començar a treballar haurem d'entrar al directori pertinent,
+en aquest cas [service](https://github.com/alexsurfcasting/massivelogs/tree/master/service)
+
+```
+	$ cd service
+```
+
+Al estar al directori de treball
+
+1.	Primer, haurem de copiar el fitxer del servei al directori on es troben els *.service* del sistema
