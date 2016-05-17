@@ -2,6 +2,10 @@
 
 # Script que genera imatge de Docker amb el servei httpd
 
-docker build -t 'alex/httpd' .
+# Variables
+image_name='alex/httpd'
+
+# Main Program
+docker build -t $image_name .
   
   
