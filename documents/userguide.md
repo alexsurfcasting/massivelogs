@@ -289,5 +289,43 @@ Un cop al directori:
 		> port3=8082
 		> port4=8083
 
+#### Mètode wget
+
+Per començar, entrarem al directori de treball [wget](https://github.com/alexsurfcasting/massivelogs/tree/master/wget)
+
+```
+	$ cd wget
+```
+
+Un cop dintre del directori:
+
+1.	Donar permisos d'execució a l'script
+
+	```
+		$ chmod +x massiveWget.sh
+	```
+2.	Executar
+
+	```
+		$ ./massiveWget.sh
+	```
+
+	***Nota***: En aquest script també podrem modificar les directivas segons les nostres necessitats.
+	
+	*	Per canviar els ports a fer les peticions, modificarem les directives *port1, port2...* segons el número de containers creats anteriorment.
+	
+		> port1=8080
+		> port2=8081
+		> port3=8082
+		> port4=8083
+
+	*	Per modificar la IP a fer les peticions, modificarem el paràmetre *ip*.
+	
+		> ip=192.168.2.49
+
+	* 	Per modificar el número de peticions a fer, canviarem *cont*.
+	
+		> cont=4
+
 
 	
