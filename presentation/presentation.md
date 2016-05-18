@@ -37,7 +37,7 @@ Són registres oficials del sistema, responen a les 5 W.
 Abans, en els sistemes l'eina utilitzada per registrar i visualitzar els logs era **syslog**.
 
 Actualment, amb l'arribada de *systemd*, l'eina més utilitzada és **journalct**. Com que el sistema que hem fet servir es Fedora 20
-em centraré en el **journal** pero tot el desenvolupament del projecte.
+em centraré en el **journal** per tot el desenvolupament del projecte.
 
 ## Generar logs
 
