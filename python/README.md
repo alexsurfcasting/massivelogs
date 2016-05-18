@@ -7,7 +7,7 @@ Script que genera gran quantitat de logs. Està desenvolupat en [Python](https:/
 1.  Descarregar el repositori.
 
 	```
-		$ git clone ...
+		$ git clone https://github.com/alexsurfcasting/massivelogs.git
 	```
 	
 2.  Entrar al directori python.
