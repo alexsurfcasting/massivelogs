@@ -1,4 +1,11 @@
 #! /usr/bin/python
+# coding: utf-8
+
+# Alex del Valle
+# isx47192405
+# ASIX
+# Projecte 2016
+# Generació massiva de logs
 
 #=============================IMPORTS===================================
 
@@ -45,9 +52,7 @@ MESSAGES = {	0: 'Message 0',
 				
 #============================VARIABLES==================================
 			
-#ident = sys.argv[1:]
-
-ident = ['httpd', 'vsftpd', 'docker']
+ident = ['httpd', 'vsftpd', 'docker', 'mysqld', 'mariadb']
 
 #============================MAIN PROGRAM===============================
 
