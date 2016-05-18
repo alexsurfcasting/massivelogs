@@ -1,30 +1,41 @@
 # Script python
 
-Script que genera gran quantitat de logs.
+Script que genera gran quantitat de logs. Està desenvolupat en [Python](https://www.python.org/).
 
 ## Instruccions
 
-1.  Descarregar l'script
+1.  Descarregar el repositori.
 
-2.  Donar permisos d'execució
-
-	
 	```
-		$ chmod +x massivePython.py
+		$ git clone ...
 	```
 	
-3.  Executar. Al directori de treball
-
+2.  Entrar al directori python.
 
 	```
-		$ chmod +x massivePython.py
+		$ cd python
+	```
+
+3.  Un cop al directori, tenim dos scripts que generen logs. L'script *massivePython* genera logs amb missatges random y de diferents
+serveis, en canvi l'script *massiveLogging* genera i acumula logs i al missatge indica el seu nivell, ja sigui warning, error...
+
+  *  Per executar *massivePython*.
+    
+ 	```
+ 		$ ./massivePython
+ 	```
+
+  *  Per executar *massiveLogging*.
+  
+	```
+		$ ./massiveLogging
 	```
   
-4. Si és volen veure tots els logs que genera és recomendable, a un altre terminal, obrir el journal
+4. Si és volen veure tots els logs que genera és recomendable, a un altre terminal, obrim el journal.
 
 
 	```
-		$ chmod +x massivePython.py
+		$ journalctl -f
 	```
   
   
