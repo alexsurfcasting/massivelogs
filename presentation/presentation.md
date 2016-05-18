@@ -20,9 +20,9 @@
 - ab
 - wget
 
-## Primers passos
+# Primers passos
 
-### Què són els logs?
+## Què són els logs?
 
 Són registres oficials del sistema, responen a les 5 W.
 
@@ -32,14 +32,14 @@ Són registres oficials del sistema, responen a les 5 W.
   -**W**here
   -**W**hy
   
-### Syslog i Journal
+## Syslog i Journal
 
 Abans, en els sistemes l'eina utilitzada per registrar i visualitzar els logs era **syslog**.
 
 Actualment, amb l'arribada de *systemd*, l'eina més utilitzada és **journalct**. Com que el sistema que hem fet servir es Fedora 20
 em centraré en el **journal** pero tot el desenvolupament del projecte.
 
-### Generar logs
+## Generar logs
 
 L'objectiu del projecte
 
@@ -50,19 +50,19 @@ L'objectiu del projecte
 - Containers Docker amb servei Apache
 - Peticions massives (ab i wget)
 
-### Python
+## Python
 
 Gràcies als mòduls **syslog** y **logging**.
 
-### Bash
+## Bash
 
 Fent ús de la utilitat **logger**.
 
-### Docker
+## Docker
 
 Creant containers amb un servei Apache actiu.
 
-### Peticions massives als containers
+## Peticions massives als containers
 
 - **ab**
 - **wget**
