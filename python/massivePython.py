@@ -12,9 +12,11 @@
 import sys
 import syslog
 import random
+import time
 
 #============================CONSTANTS==================================
 
+# Definim les facilities
 FACILITIES = [	syslog.LOG_USER, 
 				syslog.LOG_KERN, 
 				syslog.LOG_MAIL,
@@ -28,7 +30,7 @@ FACILITIES = [	syslog.LOG_USER,
 				syslog.LOG_LOCAL0,
 				syslog.LOG_LOCAL7	]
 				
-
+# Definim les priorities
 PRIORITIES = [	syslog.LOG_INFO,
 				syslog.LOG_EMERG,
 				syslog.LOG_ALERT,
@@ -38,20 +40,22 @@ PRIORITIES = [	syslog.LOG_INFO,
 				syslog.LOG_NOTICE,
 				syslog.LOG_DEBUG	]
 
+# Definim les logoptions
 LOGOPTIONS = [	syslog.LOG_PID,
 				syslog.LOG_CONS,
 				syslog.LOG_NDELAY,
 				syslog.LOG_NOWAIT,
 				syslog.LOG_PERROR	]
 
-				
+# Definim els messages				
 MESSAGES = {	0: 'Message 0',
 				1: 'Message 1',
 				2: 'Message 2', 
 				3: 'Message 3'	}
 				
 #============================VARIABLES==================================
-			
+
+# Definim els diferents noms de serveis			
 ident = ['httpd', 'vsftpd', 'docker', 'mysqld', 'mariadb']
 
 #============================MAIN PROGRAM===============================
@@ -62,3 +66,6 @@ while True:
 		syslog.openlog(log, random.choice(LOGOPTIONS), random.choice(FACILITIES))
 
 		syslog.syslog(random.choice(PRIORITIES), random.choice(MESSAGES))
+		
+		# Esperem dos segons fins a tornar a recorrer el bucle
+		time.sleep(2)
