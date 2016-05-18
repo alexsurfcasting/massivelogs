@@ -45,5 +45,29 @@ L'objectiu del projecte
 
 ## Com generem logs?
 
+- Scripts python
+- Scripts bash
+- Containers Docker amb servei Apache
+- Peticions massives (ab i wget)
+
+### Python
+
+Gràcies als mòduls **syslog** y **logging**.
+
+### Bash
+
+Fent ús de la utilitat **logger**.
+
+### Docker
+
+Creant containers amb un servei Apache actiu.
+
+### Peticions massives als containers
+
+- **ab**
+- **wget**
+
+
+
 
 
