@@ -1,6 +1,6 @@
 # Script python
 
-Script que genera gran quantitat de logs. Està desenvolupat en [Python](https://www.python.org/).
+Scripts que generen gran quantitat de logs. Estan desenvolupats en [Python](https://www.python.org/).
 
 ## Instruccions
 
