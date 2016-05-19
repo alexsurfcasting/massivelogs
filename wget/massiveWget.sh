@@ -1,5 +1,11 @@
 #! /bin/bash
 
+# Alex del Valle
+# isx47192405
+# ASIX
+# Projecte 2016
+# Generació massiva de logs
+
 # Script que genera peticions massives als servidors Apache situats als containers Docker
 
 # Ports 

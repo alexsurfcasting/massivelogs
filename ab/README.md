@@ -14,11 +14,11 @@ Pertany al paquet d'utilitats *httpd-tools*.
        $ rpm -ql httpd-tools
       ```
 
-  Si no està, l'instal·lem
+  Si no està, l'instal·lem.
   
-      
+      ```
        $ sudo dnf install httpd-tools
-      
+      ```
       
 2. Una vegada tenim la utilitat **ab**, procedim a fer les peticions al servidor que volguem.
 
@@ -27,14 +27,14 @@ Pertany al paquet d'utilitats *httpd-tools*.
       ```
       
   On:
-  * *ab* és la pròpia ordre Apache Benchmark
-  * *-n* és el nombre de peticions (requests)
-  * *-c* inidica les peticions concurrents
-  * *http://192.168.2.49:8080/* és la URL a testejar
+  * *ab* és la pròpia ordre Apache Benchmark.
+  * *-n* és el nombre de peticions (requests).
+  * *-c* inidica les peticions concurrents.
+  * *http://192.168.2.49:8080/* és la URL a testejar.
 
 ### Ús de l'script
 
-Farem servir l'script per testejar el nostres apaches creats anteriorment als containers Docker.
+Farem servir l'script per testejar els nostres apaches creats anteriorment als containers Docker.
 
 Al directori de treball on ha de ser l'script:
 
@@ -49,4 +49,4 @@ la variable corresponent.
 
 On:
 
-*	*8080* serà on posarem el número de port que volguem atacar
+*	*8080* serà on posarem el número de port que volguem atacar.

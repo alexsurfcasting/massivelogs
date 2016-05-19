@@ -6,20 +6,28 @@ systemd. La podràs trobar clicant [aquí](https://fedoraproject.org/wiki/System
 
 ## Instruccions
 
-1.  Copiar el fitxer del servei a /etc/systemd/system
+1.  Copiar el fitxer del servei a /etc/systemd/system.
 
 	```
 		$ cp massivelog.service /etc/systemd/system/massivelog.service
 	```
 	
-2.  Iniciar el servei per començar a generar logs de forma massiva
+2.  Iniciar el servei per començar a generar logs de forma massiva.
 
 	```
-		$ systemctl start massivelog.service
+		$ sudo systemctl start massivelog.service
 	```
   
-3.  Aturar el servei quan creiem convenient
+3.  Aturar el servei quan creiem convenient.
 
 	```
-		$ systemctl stop massivelog.service
+		$ sudo systemctl stop massivelog.service
 	```
+
+4.	Si volem tenir el servei actiu i generant logs només arrencar el sistema.
+
+	```
+		$ sudo systemctl enable massivelog.service
+	```
+	
+	
