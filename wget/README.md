@@ -29,6 +29,21 @@ La utilitat wget permet descarregar els arxius d'una web. És una eina molt exte
 
 ### Ús de l'script
 
+Farem servir l'script per testejar els nostres servidors *Apache* residents a containers de Docker.
+
+Al directori de treball:
+
+	```
+		$ ./massiveWget.sh
+	```
+	
+	***Notes***:
+	
+	*	En cas de voler fer servir un altre port, caldrà editar dins de l'script la variable corresponent.
+
+
+### Ús de l'script
+
 Farem servir l'script per testejar els nostres servirdors *Apache* residents a container de Docker.
 
 Al directori de treball:
