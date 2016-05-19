@@ -44,7 +44,7 @@ Farem servir l'script per testejar els nostres servidors *Apache* residents a co
 	> *port1=8080*
 	
 	On:
-	  * *8080* serà el port que volem atacar.
+	* *8080* serà el port que volem atacar.
 	  
 	  
     * En cas de voler fer les peticions a una altre ip, caldrà editar dins 
@@ -53,6 +53,6 @@ Farem servir l'script per testejar els nostres servidors *Apache* residents a co
 	> *ip=192.168.2.49*
 	
 	On:
-	  * *192.168.2.49* serà la IP  la qual farem les peticions.
+	* *192.168.2.49* serà la IP  la qual farem les peticions.
 
 
