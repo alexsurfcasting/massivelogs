@@ -43,7 +43,7 @@ Farem servir l'script per testejar els nostres servidors *Apache* residents a co
 	
 	> *port1=8080*
 	
-On:
+  On:
 	* *8080* serà el port que volem atacar.
 	  
 	  
@@ -52,7 +52,7 @@ On:
 	
 	> *ip=192.168.2.49*
 	
-On:
+  On:
 	* *192.168.2.49* serà la IP  la qual farem les peticions.
 
 
