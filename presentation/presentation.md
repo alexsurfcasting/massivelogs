@@ -4,11 +4,13 @@
 
 # Generació massiva de logs
 
+..IMATGE MOLTS LOGS..
+
 ## Introducció
 
-**Descripció**:
+**Descripció**: Tots els projectes necessitaran grans volums de logs, de tipus diferents, per posar a prova els seus sistemes. Aquest és un projecte al servei de la resta per facilitar aquesta generació massiva de logs.
 
-**Objectiu**:
+**Objectiu**: Generació massiva de logs
 
 ## Eines utilitzades
 
@@ -26,11 +28,11 @@
 
 Són registres oficials del sistema, responen a les 5 W.
 
-  -**W**ho
-  -**W**hat
-  -**W**hen
-  -**W**here
-  -**W**hy
+* **W**ho
+* **W**hat
+* **W**hen
+* **W**here
+* **W**hy
   
 ## Syslog i Journal
 
@@ -41,7 +43,7 @@ em centraré en el **journal** per tot el desenvolupament del projecte.
 
 ## Generar logs
 
-L'objectiu del projecte
+És l'objectiu del projecte.
 
 ## Com generem logs?
 
