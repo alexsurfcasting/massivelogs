@@ -46,14 +46,8 @@ Primer, haurem d'entrar dins el directori [python](https://github.com/alexsurfca
 ```
 
 Un cop al directori, executarem l'script.
-
-1.	Donar permisos d'execució.
-
-	```
-		$ chmod +x massivePython.py
-	```
 	
-2.	Executar l'script.
+1.	Executar l'script.
 
 	```
 		$ ./massivePython.py
@@ -63,7 +57,7 @@ Un cop al directori, executarem l'script.
 	i molt ràpid. Quan creiem que ja tenim suficient, ja podrem procedir
 	a parar el script.
 
-3.	Aturar l'script.
+2.	Aturar l'script.
 
 	```
 		$ ^C
@@ -81,19 +75,13 @@ Per començar, entrar dins el directori [bash](https://github.com/alexsurfcastin
 
 Quan ja estem dintre del directori:
 
-1.	Donar permisos d'execució.
-
-	```
-		$ chmod +x massiveBash.sh
-	```
-
-2.	Engegar script.
+1.	Engegar script.
 
 	```
 		$ ./massiveBash.sh
 	```
 
-3.	Aturar.
+2.	Aturar.
 
 	```
 		$ ^C
@@ -183,14 +171,7 @@ aquests fitxers i el Dockerfile.
 
 Quan estem dintre del directori [apache](https://github.com/alexsurfcasting/massivelogs/tree/master/docker/apache):
 
-1.	Donar permisos d'execució als scripts.
-
-	```
-		$ chmod +x buildImage.sh
-		$ chmod +x createContainer.sh
-	```
-	
-2.	Crear la imatge a partir de la qual crearem els containers.
+1.	Crear la imatge a partir de la qual crearem els containers.
 
 	```
 		$ ./buildImage.sh
@@ -201,7 +182,7 @@ Quan estem dintre del directori [apache](https://github.com/alexsurfcasting/mass
 	
 	> image_name='alex/httpd'
 	
-3.	Crear els containers.
+2.	Crear els containers.
 
 	```
 		$ ./createContainer.sh
@@ -221,7 +202,7 @@ Quan estem dintre del directori [apache](https://github.com/alexsurfcasting/mass
 	
 		> proxy_port=8080
 
-4.	Iniciar els containers, si deixem els script sense modificar cap directiva inicarem 4 containers.
+3.	Iniciar els containers, si deixem els script sense modificar cap directiva inicarem 4 containers.
 
 	```
 		$ docker start httpd{2..5}
@@ -229,13 +210,13 @@ Quan estem dintre del directori [apache](https://github.com/alexsurfcasting/mass
 	
 	***Nota***: El noms dels containers creats són correlatius (*httpd2, httpd3, httpd4...*).
 	
-5.	També tenim l'opció d'iniciar containers en primer pla per tal de poder veure els logs per la seva sortida estàndar. En aquest cas, els haurem d'iniciar un a un.
+4.	També tenim l'opció d'iniciar containers en primer pla per tal de poder veure els logs per la seva sortida estàndar. En aquest cas, els haurem d'iniciar un a un.
 
 	```
 		$ docker start -a httpd2
 	```
 	
-6.	En cas de voler entrar al container en mode interactiu.
+5.	En cas de voler entrar al container en mode interactiu.
 
 	```
 		$ docker exec -it httpd2 /bin/bash
@@ -256,13 +237,7 @@ Primer de tot, entrarem al directori de treball [ab](https://github.com/alexsurf
 
 Un cop al directori:
 
-1.	Donar permisos d'execució a l'script.
-
-	```
-		$ chmod +x massiveAb.sh
-	```
-
-2.	Executar l'script.
+1.	Executar l'script.
 
 	```
 		$ ./massiveAb.sh
@@ -299,12 +274,7 @@ Per començar, entrarem al directori de treball [wget](https://github.com/alexsu
 
 Un cop dintre del directori:
 
-1.	Donar permisos d'execució a l'script.
-
-	```
-		$ chmod +x massiveWget.sh
-	```
-2.	Executar.
+1.	Executar.
 
 	```
 		$ ./massiveWget.sh
