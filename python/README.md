@@ -31,7 +31,7 @@ serveis, en canvi l'script *massiveLogging* genera i acumula logs i al missatge 
 		$ ./massiveLogging
 	```
   
-4. Si és volen veure tots els logs que genera és recomendable, a un altre terminal, obrim el journal.
+4. Si és volen veure tots els logs que genera és recomanable, a un altre terminal, obrir el journal.
 
 
 	```

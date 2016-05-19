@@ -1,33 +1,24 @@
 #! /usr/bin/python
+# coding: utf-8
 
-#~ import logging
-#~ import logging.handlers
-#~ import random
-#~ 
-#~ my_log = logging.getLogger('MyLogger')
-#~ 
-#~ 
+# Alex del Valle
+# isx47192405
+# ASIX
+# Projecte 2016
+# Generació massiva de logs
 
-#~ 
-#~ LOGS = [	my_log.critical('Critical message'),
-			#~ my_log.error('Error message'),
-			#~ my_log.warning('Warning message'),
-			#~ my_log.info('Informative message'),
-			#~ my_log.debug('Debug message')	]
-#~ 
-	#~ 
-#~ for level in LEVELS:	
-	#~ for log in LOGS:
-		#~ handler = logging.handlers.SysLogHandler(address = '/dev/log')
-#~ 
-		#~ my_log.addHandler(handler)
+#=============================IMPORTS===================================
 
 import logging
 import logging.handlers
 import time
 import random
 
+#============================VARIABLES==================================
+
 my_logger = logging.getLogger('MyLogger')
+
+#============================CONSTANTS==================================
 
 LEVELS = [	logging.DEBUG, 
 			logging.ERROR, 
@@ -35,6 +26,7 @@ LEVELS = [	logging.DEBUG,
 			logging.INFO,
 			logging.CRITICAL	]
 
+#============================MAIN PROGRAM===============================
 
 while True:
 	

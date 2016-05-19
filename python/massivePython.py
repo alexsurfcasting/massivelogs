@@ -67,5 +67,5 @@ while True:
 
 		syslog.syslog(random.choice(PRIORITIES), random.choice(MESSAGES))
 		
-		# Esperem dos segons fins a tornar a recorrer el bucle
-		time.sleep(2)
+		# Esperem un segon fins a tornar a recorrer el bucle
+		time.sleep(0.3)
