@@ -38,24 +38,24 @@ Al directori de treball:
 		$ ./massiveWget.sh 
 	```
   
- ***Notes***: 
+	***Notes***: 
 
-	*	En cas de voler fer servir un altre port, caldrà editar dins de
-	l'script la variable corresponent.
+		*	En cas de voler fer servir un altre port, caldrà editar dins de
+		l'script la variable corresponent.
 	
-	> *port1=8080*
+		> *port1=8080*
 	
-	On:
-	
-		*	*8080* serà el port que volem atacar.
+		On:
+		
+			*	*8080* serà el port que volem atacar.
 
 
-	*	En cas de voler fer les peticions a una altre ip, caldrà editar dins 
-	de l'script la variable corresponent.
+		*	En cas de voler fer les peticions a una altre ip, caldrà editar dins 
+		de l'script la variable corresponent.
 	
-	> *ip=192.168.2.49*
+		> *ip=192.168.2.49*
 	
-	On:
-	
-		*	*192.168.2.49* serà la IP  la qual farem les peticions.
+		On:
+		
+			*	*192.168.2.49* serà la IP  la qual farem les peticions.
 		
