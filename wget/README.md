@@ -33,14 +33,11 @@ Farem servir l'script per testejar els nostres servidors *Apache* residents a co
 
 Al directori de treball:
 
-	```
-		$ ./massiveWget.sh
-	```
-	
-	***Notes***:
-	
-	*	En cas de voler fer servir un altre port, caldrà editar dins de l'script la variable corresponent.
+		$ ./massiveWget.sh  
 
+>***Notes***:
+	
+*	En cas de voler fer servir un altre port, caldrà editar dins de l'script la variable corresponent.
 
 ### Ús de l'script
 
