@@ -23,51 +23,22 @@ La utilitat wget permet descarregar els arxius d'una web. És una eina molt exte
 	```
 	
   On:
-    * *wget* és la pròpia ordre
-    * *-r* opció recursiva
-    * *http://192.168.2.49:8080* és la URL de la pàgina web que volem
-
+    * *wget* és la pròpia ordre.
+    * *-r* opció recursiva.
+    * *http://192.168.2.49:8080* és la URL de la pàgina web que volem.
+    
+  
 ### Ús de l'script
 
 Farem servir l'script per testejar els nostres servidors *Apache* residents a containers de Docker.
 
 Al directori de treball:
 
-		$ ./massiveWget.sh  
-
->***Notes***:
-	
-*	En cas de voler fer servir un altre port, caldrà editar dins de l'script la variable corresponent.
-
-### Ús de l'script
-
-Farem servir l'script per testejar els nostres servirdors *Apache* residents a container de Docker.
-
-Al directori de treball:
-
-
 	```
-		$ ./massiveWget.sh 
+		$ ./massiveWget.sh
 	```
-  
-	***Notes***: 
 
-		*	En cas de voler fer servir un altre port, caldrà editar dins de
-		l'script la variable corresponent.
+	***Notes***:
 	
-		> *port1=8080*
-	
-		On:
-		
-			*	*8080* serà el port que volem atacar.
+	*	En cas de voler fer servir un altre port, caldrà editar dins l'script la variable corresponent.
 
-
-		*	En cas de voler fer les peticions a una altre ip, caldrà editar dins 
-		de l'script la variable corresponent.
-	
-		> *ip=192.168.2.49*
-	
-		On:
-		
-			*	*192.168.2.49* serà la IP  la qual farem les peticions.
-		
