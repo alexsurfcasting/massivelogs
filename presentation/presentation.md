@@ -45,10 +45,13 @@ em centraré en el **journal** per tot el desenvolupament del projecte.
 
 Aquests logs 
 
+# Comencem a generar logs
+
 ## Com generem logs?
 
 - Scripts python
 - Scripts bash
+- Serveis
 - Containers Docker amb servei Apache
 - Peticions massives (ab i wget)
 
@@ -60,14 +63,36 @@ Gràcies als mòduls **syslog** y **logging**.
 
 Fent ús de la utilitat **logger**.
 
+## Services
+
+Creant un servei al sistema mitjançant els scripts de Python o Bash.
+
 ## Docker
 
 Creant containers amb un servei Apache actiu.
 
 ## Peticions massives als containers
 
-- **ab**
-- **wget**
+- ab
+- wget
+
+# Conclusions
+
+## Conclusions
+
+- Aprendre a gestionar i treballar amb un respositori git
+- Treballar en un entorn adequat
+- Funcionament logs
+- Generació logs
+- Correcta documentació
+
+## Opinió personal
+
+Aprende a desenvolupar-se.
+Utilització d'eines i recursos apresos durant el cicle.
+
+
+
 
 
 
