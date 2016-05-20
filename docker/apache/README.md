@@ -38,3 +38,11 @@ Per començar a crear els containers necessaris per a fer els logs d'Apache:
 
      ```
       $ docker start -a httpd2
+     ```
+     
+4. Un cop tenim els containers iniciats, podem començar a fer peticions massives. Gràcies a aquest repositori tenim dos mètodes:
+
+ * [ab](https://github.com/alexsurfcasting/massivelogs/tree/master/ab)
+ * [wget](https://github.com/alexsurfcasting/massivelogs/tree/master/wget)
+ 
+També podem trobar els dos mètodes al [manual d'usuari](https://github.com/alexsurfcasting/massivelogs/blob/master/manual/userguide.md).

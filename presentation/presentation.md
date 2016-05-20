@@ -4,8 +4,6 @@
 
 # Generació massiva de logs
 
-..IMATGE MOLTS LOGS..
-
 ## Introducció
 
 **Descripció**: Tots els projectes necessitaran grans volums de logs, de tipus diferents, per posar a prova els seus sistemes. Aquest és un projecte al servei de la resta per facilitar aquesta generació massiva de logs.
@@ -44,6 +42,8 @@ em centraré en el **journal** per tot el desenvolupament del projecte.
 ## Generar logs
 
 És l'objectiu del projecte.
+
+Aquests logs 
 
 ## Com generem logs?
 

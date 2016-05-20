@@ -21,7 +21,7 @@ ip=192.168.2.49
 temporal=webtemp
 
 # Contador de requests per server
-cont=4
+cont=10
 
 while [ $cont -gt 0 ]
 do
@@ -29,6 +29,8 @@ do
   wget -O /tmp/$temporal -r $ip:$port2 &> /dev/null && rm -f /tmp/$temporal
   wget -O /tmp/$temporal -r $ip:$port3 &> /dev/null && rm -f /tmp/$temporal
   wget -O /tmp/$temporal -r $ip:$port4 &> /dev/null && rm -f /tmp/$temporal
+  
+  sleep 1
   
   cont=$(($cont-1))
 done
