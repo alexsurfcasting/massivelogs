@@ -1,46 +1,40 @@
-dockerfiles-fedora-httpd
-========================
+# Docker amb servei *Apache*
 
-Built on : Docker version 1.9.1
-Run on: Docker version 1.9.1
-Tested on : Docker version 1.9.1
+Per fer la generació massiva de logs, necessitarem els containers de Docker amb el servei *Apache* actiu, per tant, després
+d'haber fet el nostre primer container i haber tinguit una primera presa de contacte amb aquesta utilitat, començarem
+a crear-los.
 
-Fedora dockerfile for httpd
+## Instruccions
 
-Get Docker version
+Per començar a crear els containers necessaris per a fer els logs d'Apache:
 
-```
-# docker version
-```
+1. Crear la imatge Apache
 
-To build:
+  Al directori de treball adequat, en aquest cas dins el directori on hi ha el Dockerfile:
+  
+    ```
+     $ ./buildImage.sh
+    ```
+    
+  Aquest script crea la imatge necessària per fer els containers.
+  
+2. Crear els containers que contenen l'apache amb l'script
 
-Copy the sources down and do the build-
+    ``` 
+     $ ./createContainer.sh
+    ```
+    
+3. Iniciar els containers creats
 
-```
-# docker build --rm -t <username>/httpd .
-```
+ Per iniciar els containers tenim dues ocpions.
+ 
+ * Iniciar-los i que quedin en segon pla sense poder interactuar-hi, d'aquesta manera es poden engegar tots 4 en una sola ordre.
+ 
+     ```
+      $ docker start httpd{2..5}
+     ```
+     
+ * Iniciar-los en primer pla, d'aquesta manera podrem veure els logs que es generen ja que es mostraran per stdout del cotainer.
 
-To run (if port 80 is open on your host):
-
-```
-# docker run -d -p 80:80 <username>/httpd
-```
-
-or to assign a random port that maps to port 80 on the container:
-
-```
-# docker run -d -p 80 <username>/httpd
-```
-
-To the port that the container is listening on:
-
-```
-# docker ps
-```
-
-To test:
-
-```
-# curl http://localhost
-```
+     ```
+      $ docker start -a httpd2
