@@ -45,8 +45,9 @@ Primer, haurem d'entrar dins el directori [python](https://github.com/alexsurfca
 	$ cd python
 ```
 
-Un cop al directori, tenim dos script. Un anomenat *massivePython* que fa servir el mòdul **syslog**,
-i un altre anomenat *massiveLogging* que utilitza el mòdul **logging*.
+Un cop al directori, tenim dos scripts. Un anomenat *massivePython* que fa servir el mòdul [**syslog**](https://docs.python.org/2/library/syslog.html), i un altre anomenat *massiveLogging* que utilitza el mòdul [**logging**](https://docs.python.org/2/library/logging.html).
+
+Per tenir més clara la el·lecció de l'script a executar, s'ha de tenir en compte que l'script *massivePython* envia els logs de categoria més "greu" per la sortida estàndar, en canvi, l'script *massiveLogging* no embruta la pantalla i els logs generats els haurem de veure (com hem indicat al principi d'aquesta guía) a través del journalctl.
 	
 1.	Executar scripts.
 
@@ -64,7 +65,7 @@ i un altre anomenat *massiveLogging* que utilitza el mòdul **logging*.
 	
 	En aquest punt, es començaran a generar logs massivament, en gran quantitat
 	i molt ràpid. Quan creiem que ja tenim suficient, ja podrem procedir
-	a parar el script.
+	a parar els scripts.
 
 2.	Aturar scripts.
 
@@ -98,42 +99,70 @@ Quan ja estem dintre del directori:
 
 ### Mètode service
 
-Aquest mètode és una mica més complexe, tracta d'un servei que en arrencar començara a generar logs
-fins que el parem. Funciona gràcies a systemd ... **EXPLICAR SYSTEMD**
+Aquest mètode és una mica més complexe. Tracta de dos serveis, que en arrencar començaran a generar logs fins que els aturem. Funcionen gràcies a systemctl, el controlador de serveis de [systemd](https://fedoraproject.org/wiki/Systemd/es).
 
 Com a tots els altres mètodes, per començar a treballar haurem d'entrar al directori pertinent,
-en aquest cas [service](https://github.com/alexsurfcasting/massivelogs/tree/master/service).
+en aquest cas [services](https://github.com/alexsurfcasting/massivelogs/tree/master/service).
 
 ```
-	$ cd service
+	$ cd services
 ```
 
 Al estar al directori de treball:
 
-1.	Primer, haurem de copiar el fitxer del servei al directori on es troben els *.service* del sistema.
+1.	Primer, haurem de copiar els fitxers del serveis al directori on es troben els *.service* del sistema.
 
 	```
 		$ cp massivelog.service /etc/systemd/system/massivelog.service
 	```
 	
-2.	Un cop copiat, iniciar el servei per començar a generar logs.
-
 	```
-		$ sudo systemctl start massivelog.service
+		$ cp massivelogging.service /etc/systemd/system/massivelogging.service
 	```
 	
+	
+2.	Un cop copiats, iniciarem el servei que volguem o créxem mes adequat per començar a generar logs.
+
+	* Per inciar el servei *massivelog*:
+
+		```
+			$ sudo systemctl start massivelog.service
+		```
+	
+	* Per iniciar el servei *massivelogging*:
+		
+		```
+			$ sudo systemctl start massivelogging.service
+		```
+		
 3. 	Quan créiem convenient o estem ja satisfets amb la quanitat de logs generada.
 
-	```
-		$ sudo systemctl stop massivelog.service
-	```
-
+	* Per aturar el servei *massivelog*:
+	
+		```
+			$ sudo systemctl stop massivelog.service
+		```
+		
+	* Per aturar el servei *massivelogging*:
+	
+		```
+			$ sudo systemctl stop massivelogging.service
+		```
+		
 4.	En cas de que volguem tenir sempre iniciat el servei al arrencar el sistema.
 
-	```
-		$ sudo systemctl enable massivelog.service
-	```
+	* Per habilitar el servei *massivelog* al iniciar el sistema:
+
+		```
+			$ sudo systemctl enable massivelog.service
+		```
 	
+	* Per habilitar el servei *massivelogging* al inciar el sistema:
+		
+		```
+			$ sudo systemctl enable massivelogging.service
+		````
+		
 ### Mètode Docker
 
 El mètode Docker és el més complexe de tots, i a més a més, té dintre seu alguns *submètodes*. Per tal d'entendre
