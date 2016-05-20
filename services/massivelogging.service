@@ -8,13 +8,13 @@
 # Servei de generació massiva de logs
 
 [Unit]
-Description=The MassiveLogs service
+Description=The MassiveLogging service
 
 [Service]
 Type=simple
 
-PIDFile=/var/run/massivelog.pid
-ExecStart=/var/tmp/massivelogs/python/massivePython.py
+PIDFile=/var/run/massiveloging.pid
+ExecStart=/var/tmp/massivelogs/python/massiveLogging.py
 
 [Install]
 WantedBy=multi-user.target

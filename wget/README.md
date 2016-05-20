@@ -1,6 +1,6 @@
 # wget
 
-La utilitat wget permet descarregar els arxius d'una web. És una eina molt extensa i que conté diverses opcions, per tant, abans de fer qualsevol cosa recomano llegir el seu ![manual](https://www.gnu.org/software/wget/manual/wget.html).
+La utilitat wget permet descarregar els arxius d'una web. És una eina molt extensa i que conté diverses opcions, per tant, abans de fer qualsevol cosa recomano llegir el seu [manual](https://www.gnu.org/software/wget/manual/wget.html).
 
 ## Instruccions
 

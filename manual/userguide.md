@@ -45,19 +45,28 @@ Primer, haurem d'entrar dins el directori [python](https://github.com/alexsurfca
 	$ cd python
 ```
 
-Un cop al directori, executarem l'script.
+Un cop al directori, tenim dos script. Un anomenat *massivePython* que fa servir el mòdul **syslog**,
+i un altre anomenat *massiveLogging* que utilitza el mòdul **logging*.
 	
-1.	Executar l'script.
+1.	Executar scripts.
 
-	```
-		$ ./massivePython.py
-	```
+	* Executar *massivePython*.
+		
+		```
+			$ ./massivePython.py
+		```
+	
+	* Executar *massiveLogging*.
+	
+		```
+			$ ./massiveLogging.py
+		```
 	
 	En aquest punt, es començaran a generar logs massivament, en gran quantitat
 	i molt ràpid. Quan creiem que ja tenim suficient, ja podrem procedir
 	a parar el script.
 
-2.	Aturar l'script.
+2.	Aturar scripts.
 
 	```
 		$ ^C
