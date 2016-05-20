@@ -119,9 +119,16 @@ Al estar al directori de treball:
 	```
 		$ cp massivelogging.service /etc/systemd/system/massivelogging.service
 	```
+
+2.	Un cop copiats els serveis a la ruta corresponent, s'haurà de tenir en compte on tenim descarregats els scripts anteriors de 
+[python](https://github.com/alexsurfcasting/massivelogs/tree/master/python), ja que serà necessari possar la ruta correcta d'on es troben a la directiva **ExecStart**.
+
+	> ExecStart=/var/tmp/massivelogs/python/massivePython.py
 	
+	On:
+	* *ExecStart* és la ruta on estarà el nostre script.
 	
-2.	Un cop copiats, iniciarem el servei que volguem o créxem mes adequat per començar a generar logs.
+3.	Després, iniciarem el servei que volguem o creiem mes adequat per començar a generar logs.
 
 	* Per inciar el servei *massivelog*:
 
@@ -135,7 +142,7 @@ Al estar al directori de treball:
 			$ sudo systemctl start massivelogging.service
 		```
 		
-3. 	Quan créiem convenient o estem ja satisfets amb la quanitat de logs generada.
+4. 	Quan créiem convenient o estem ja satisfets amb la quanitat de logs generada.
 
 	* Per aturar el servei *massivelog*:
 	
@@ -149,7 +156,7 @@ Al estar al directori de treball:
 			$ sudo systemctl stop massivelogging.service
 		```
 		
-4.	En cas de que volguem tenir sempre iniciat el servei al arrencar el sistema.
+5.	En cas de que volguem tenir sempre iniciat el servei al arrencar el sistema.
 
 	* Per habilitar el servei *massivelog* al iniciar el sistema:
 
@@ -301,6 +308,10 @@ Un cop al directori:
 		> port2=8081
 		> port3=8082
 		> port4=8083
+
+	*	Per modificar el número de peticions a fer, editarem la directiva *cont*.
+	
+		> cont=1
 
 #### Mètode wget
 
