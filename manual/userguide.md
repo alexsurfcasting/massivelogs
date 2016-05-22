@@ -144,8 +144,15 @@ Al estar al directori de treball:
 		
 		```
 			$ sudo systemctl enable massivelogging.service
-		````
-		
+		```
+
+6.	Si no volem fer tot el procés anterior manualment, podrem executar directament un script que ho fa automàticament.
+	Important executar-lo com amb un usuari amb permisos d'**administració**.
+
+	```
+		$ sudo ./createServices.sh
+	```
+	
 ### Mètode Docker
 
 El mètode Docker és el més complexe de tots, i a més a més, té dintre seu alguns *submètodes*. Per tal d'entendre
