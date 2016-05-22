@@ -19,6 +19,7 @@ Eines utilitzades:
 *	Docker
 *	Servei Apache (httpd)
 *	Apache Benchmark
+*	wget
 
 [![Docker](http://s32.postimg.org/ejjpvqlqp/docker.png)](https://docker.org/)
 [![Apache](http://s32.postimg.org/gm2ksyd8x/apache_logo.png)](https://httpd.apache.org/)
