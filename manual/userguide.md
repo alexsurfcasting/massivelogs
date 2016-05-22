@@ -73,30 +73,6 @@ Per tenir més clara la el·lecció de l'script a executar, s'ha de tenir en com
 		$ ^C
 	```
 
-### Mètode bash	
-
-ídem que el mètode anterior, però en aquest cas l'script està desenvolupat en bash.
-
-Per començar, entrar dins el directori [bash](https://github.com/alexsurfcasting/massivelogs/tree/master/bash).
-
-```
-	$ cd bash
-```
-
-Quan ja estem dintre del directori:
-
-1.	Engegar script.
-
-	```
-		$ ./massiveBash.sh
-	```
-
-2.	Aturar.
-
-	```
-		$ ^C
-	```
-
 ### Mètode service
 
 Aquest mètode és una mica més complexe. Tracta de dos serveis, que en arrencar començaran a generar logs fins que els aturem. Funcionen gràcies a systemctl, el controlador de serveis de [systemd](https://fedoraproject.org/wiki/Systemd/es).
