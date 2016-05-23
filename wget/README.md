@@ -56,3 +56,9 @@ Farem servir l'script per testejar els nostres servidors *Apache* residents a co
 	* *192.168.2.49* serà la IP  la qual farem les peticions.
 
 
+	* Si volem modificar el número de peticions a fer, editarem la variable *cont*.
+	
+	> *cont=4*
+	
+	On:
+	* *4* serà el número de peticions a fer per container.

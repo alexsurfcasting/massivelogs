@@ -329,5 +329,9 @@ Un cop dintre del directori:
 	
 		> cont=4
 
+Segurament haureu observat que els logs generats pels containers Docker surten en un format anomenat *blob*, que és un format binari.
+Per solventar això i poder veure realment els logs complerts que es generen executarem:
 
-	
+```
+	$ journalctl -fa
+```

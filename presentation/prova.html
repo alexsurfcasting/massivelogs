@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Alex del Valle" />
+  <title>Generació massiva de logs</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Generació massiva de logs</h1>
+  <p class="author">
+Alex del Valle
+  </p>
+  <p class="date">May 2016</p>
+</div>
+<div id="generació-massiva-de-logs" class="titleslide slide section level1"><h1>Generació massiva de logs</h1></div><div id="introducció" class="slide section level2">
+<h1>Introducció</h1>
+<p><strong>Descripció</strong>: Tots els projectes necessitaran grans volums de logs, de tipus diferents, per posar a prova els seus sistemes. Aquest és un projecte al servei de la resta per facilitar aquesta generació massiva de logs.</p>
+<p><strong>Objectiu</strong>: Generació massiva de logs</p>
+</div><div id="eines-utilitzades" class="slide section level2">
+<h1>Eines utilitzades</h1>
+<ul>
+<li>Sistema Fedora 20</li>
+<li>Bash</li>
+<li>Python</li>
+<li>Apache</li>
+<li>Docker</li>
+<li>ab</li>
+<li>wget</li>
+</ul>
+</div>
+<div id="primers-passos" class="titleslide slide section level1"><h1>Primers passos</h1></div><div id="què-són-els-logs" class="slide section level2">
+<h1>Què són els logs?</h1>
+<p>Són registres oficials del sistema, responen a les 5 W.</p>
+<ul>
+<li><strong>W</strong>ho</li>
+<li><strong>W</strong>hat</li>
+<li><strong>W</strong>hen</li>
+<li><strong>W</strong>here</li>
+<li><strong>W</strong>hy</li>
+</ul>
+</div><div id="syslog-i-journal" class="slide section level2">
+<h1>Syslog i Journal</h1>
+<p>Abans, en els sistemes l'eina utilitzada per registrar i visualitzar els logs era <strong>syslog</strong>.</p>
+<p>Actualment, amb l'arribada de <em>systemd</em>, l'eina més utilitzada és <strong>journalct</strong>. Com que el sistema que hem fet servir es Fedora 20 em centraré en el <strong>journal</strong> per tot el desenvolupament del projecte.</p>
+</div><div id="generar-logs" class="slide section level2">
+<h1>Generar logs</h1>
+<p>És l'objectiu del projecte.</p>
+<p>Aquests logs</p>
+</div>
+<div id="comencem-a-generar-logs" class="titleslide slide section level1"><h1>Comencem a generar logs</h1></div><div id="com-generem-logs" class="slide section level2">
+<h1>Com generem logs?</h1>
+<ul>
+<li>Scripts python</li>
+<li>Scripts bash</li>
+<li>Serveis</li>
+<li>Containers Docker amb servei Apache</li>
+<li>Peticions massives (ab i wget)</li>
+</ul>
+</div><div id="python" class="slide section level2">
+<h1>Python</h1>
+<p>Gràcies als mòduls <strong>syslog</strong> y <strong>logging</strong>.</p>
+</div><div id="bash" class="slide section level2">
+<h1>Bash</h1>
+<p>Fent ús de la utilitat <strong>logger</strong>.</p>
+</div><div id="services" class="slide section level2">
+<h1>Services</h1>
+<p>Creant un servei al sistema mitjançant els scripts de Python o Bash.</p>
+</div><div id="docker" class="slide section level2">
+<h1>Docker</h1>
+<p>Creant containers amb un servei Apache actiu.</p>
+</div><div id="peticions-massives-als-containers" class="slide section level2">
+<h1>Peticions massives als containers</h1>
+<ul>
+<li>ab</li>
+<li>wget</li>
+</ul>
+</div>
+<div id="conclusions" class="titleslide slide section level1"><h1>Conclusions</h1></div><div id="conclusions-1" class="slide section level2">
+<h1>Conclusions</h1>
+<ul>
+<li>Aprendre a gestionar i treballar amb un respositori git</li>
+<li>Treballar en un entorn adequat</li>
+<li>Funcionament logs</li>
+<li>Generació logs</li>
+<li>Correcta documentació</li>
+</ul>
+</div><div id="opinió-personal" class="slide section level2">
+<h1>Opinió personal</h1>
+<p>Aprende a desenvolupar-se. Utilització d'eines i recursos apresos durant el cicle.</p>
+</div>
+</body>
+</html>

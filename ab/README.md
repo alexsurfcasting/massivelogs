@@ -42,11 +42,25 @@ Al directori de treball on ha de ser l'script:
 $ ./massiveAb.sh 
 ```
 
-**Nota**: En cas de voler fer servir un altre port, caldrà editar dins l'script
+**Nota**: En cas de voler fer servir una altra configuració, caldrà editar dins l'script
 la variable corresponent.
 
->	*port1=8080*
+  * Per canviar la IP on fer les peticions editarem la directiva *ip*.
+  
+    > *ip=192.168.2.49*
+  
+  * Per fer les peticions cap a un altre port modificarem la variable *port*.
+  
+	> *port1=8080*
+	
+  * Per variar el número de peticions a les IP i port esmentats editarem la directiva *cont*.
+  
+    > *cont=1*
 
-On:
-
-*	*8080* serà on posarem el número de port que volguem atacar.
+  On:
+  
+   *    *192.168.2.49* serà la IP on farem les peticions.
+   
+   *	*8080* serà on posarem el número de port que volguem atacar.
+   
+   *	*1* serà el número de peticions que farem a cada IP i port.
