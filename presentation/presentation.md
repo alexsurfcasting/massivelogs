@@ -113,7 +113,7 @@ Redirigeixen el port 80 de l'Apache cap a un port del sistema.
 Els logs dels fitxers **access_log** i **error_log** es mostren per *stdout*.
 
 ```
-ln -sf /dev/stdout /var/log/httpd/acces_log
+ln -sf /dev/stdout /var/log/httpd/access_log
 ln -sf /dev/stderr /var/log/httpd/error_log
 ```
 
