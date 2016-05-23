@@ -91,9 +91,21 @@ Creant containers amb un servei Apache actiu.
 - ab
 - wget
 
+## ab
+
+Fa peticions massives.
+
+**Problema**: No recursives.
+
+## wget
+
+Genera peticions massives recursives.
+
+**Problema**: Descarrega la web.
+
 # Conclusions
 
-## Conclusions
+## Conclusions generals
 
 - Aprendre a gestionar i treballar amb un respositori git
 - Treballar en un entorn adequat

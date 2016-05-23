@@ -1,0 +1,35 @@
+-- Logs begin at Wed 2015-09-16 10:54:48 CEST. --
+May 23 13:34:01 i19.informatica.escoladeltreball.org crond[553]: (pam_mount.c:522): mount of /users/inf/postgres/postgres failed
+May 23 13:34:01 i19.informatica.escoladeltreball.org crond[553]: (pam_mount.c:477): warning: could not obtain password interactively either
+May 23 13:34:01 i19.informatica.escoladeltreball.org CROND[26292]: (postgres) CMD (psql -d centremedic -f /var/tmp/importapacients.sql > "/var/tmp/resimportapacients_`date +)
+May 23 13:34:01 i19.informatica.escoladeltreball.org sendmail[26294]: u4NBY1FK026294: from=postgres, size=641, class=-60, nrcpts=1, msgid=<201605231134.u4NBY1FK026294@i19.informatica.escoladeltreball.org>, relay=postgres@localhost
+May 23 13:34:01 i19.informatica.escoladeltreball.org sendmail[26294]: u4NBY1FK026294: to=postgres, ctladdr=postgres (26/26), delay=00:00:00, xdelay=00:00:00, mailer=relay, pri=138641, relay=[127.0.0.1] [127.0.0.1], dsn=4.0.0, stat=Deferred: Connection refused by [127.0.0.1]
+May 23 13:34:14 i19.informatica.escoladeltreball.org httpd[26426]: Message 3
+May 23 13:34:14 i19.informatica.escoladeltreball.org vsftpd[26426]: Message 2
+May 23 13:34:14 i19.informatica.escoladeltreball.org docker[26426]: Message 0
+May 23 13:34:15 i19.informatica.escoladeltreball.org mysqld[26426]: Message 2
+May 23 13:34:15 i19.informatica.escoladeltreball.org mariadb[26426]: Message 2
+May 23 13:34:15 i19.informatica.escoladeltreball.org httpd[26426]: Message 3
+May 23 13:34:16 i19.informatica.escoladeltreball.org vsftpd[26426]: Message 1
+May 23 13:34:16 i19.informatica.escoladeltreball.org docker[26426]: Message 3
+May 23 13:34:16 i19.informatica.escoladeltreball.org mysqld[26426]: Message 2
+May 23 13:34:16 i19.informatica.escoladeltreball.org mariadb[26426]: Message 1
+May 23 13:34:17 i19.informatica.escoladeltreball.org httpd[26426]: Message 3
+May 23 13:34:17 i19.informatica.escoladeltreball.org vsftpd[26426]: Message 3
+May 23 13:34:17 i19.informatica.escoladeltreball.org docker[26426]: Message 1
+May 23 13:34:18 i19.informatica.escoladeltreball.org mysqld[26426]: Message 3
+May 23 13:34:18 i19.informatica.escoladeltreball.org mariadb[26426]: Message 1
+May 23 13:34:18 i19.informatica.escoladeltreball.org httpd[26426]: Message 2
+May 23 13:34:19 i19.informatica.escoladeltreball.org vsftpd[26426]: Message 3
+May 23 13:34:19 i19.informatica.escoladeltreball.org docker[26426]: Message 0
+May 23 13:34:19 i19.informatica.escoladeltreball.org mysqld[26426]: Message 2
+May 23 13:34:19 i19.informatica.escoladeltreball.org mariadb[26426]: Message 2
+May 23 13:34:20 i19.informatica.escoladeltreball.org httpd[26426]: Message 3
+May 23 13:34:20 i19.informatica.escoladeltreball.org vsftpd[26426]: Message 3
+May 23 13:34:20 i19.informatica.escoladeltreball.org docker[26426]: Message 2
+May 23 13:34:21 i19.informatica.escoladeltreball.org mysqld[26426]: Message 0
+May 23 13:34:21 i19.informatica.escoladeltreball.org mariadb[26426]: Message 1
+May 23 13:34:21 i19.informatica.escoladeltreball.org httpd[26426]: Message 2
+May 23 13:34:22 i19.informatica.escoladeltreball.org vsftpd[26426]: Message 2
+May 23 13:34:22 i19.informatica.escoladeltreball.org docker[26426]: Message 0
+May 23 13:34:22 i19.informatica.escoladeltreball.org mysqld[26426]: Message 3
