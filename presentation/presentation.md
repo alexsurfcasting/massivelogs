@@ -1,10 +1,11 @@
 % Generació massiva de logs
 % Alex del Valle
-% May 2016
+% Maig 2016
 
 # Introducció
 
-**Descripció**: Tots els projectes necessitaran grans volums de logs, de tipus diferents, per posar a prova els seus sistemes. Aquest és un projecte al servei de la resta per facilitar aquesta generació massiva de logs.
+**Descripció**: Tots els projectes necessitaran grans volums de logs, de tipus diferents, 
+per posar a prova els seus sistemes. Aquest és un projecte al servei de la resta per facilitar aquesta generació massiva de logs.
 
 **Objectiu**: Generació massiva de logs
 
@@ -30,7 +31,7 @@ Són registres oficials del sistema, responen a les 5 W.
 - **W**here
 - **W**hy
 
-![logs](Selection_010.png)
+![logs](log.png)
 
 ## Tipus de logs
 
@@ -46,7 +47,6 @@ Són registres oficials del sistema, responen a les 5 W.
 - Emerg
 - Panic
 
-  
 ## Syslog i Journal
 
 Abans, en els sistemes l'eina utilitzada per registrar i visualitzar els logs era **syslog**.
@@ -103,8 +103,9 @@ Creant containers amb un servei Apache actiu.
 
 ## Opinió personal
 
-Aprende a desenvolupar-se.
-Utilització d'eines i recursos apresos durant el cicle.
+- Aprende a desenvolupar-se
+- Utilització d'eines i recursos apressos durant el cicle
+- Creació de presentacions amb pandoc
 
 
 
