@@ -2,7 +2,9 @@
 
 # Alex del Valle
 # isx47192405
-# Projecte ASIX 2016
+# ASIX
+# Projecte 2016
+# Generació massiva de logs
 
 # Script que genera peticions massives contra els containers d'Apache 
 
