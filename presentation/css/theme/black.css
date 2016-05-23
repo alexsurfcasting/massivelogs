@@ -50,7 +50,8 @@ body {
 
 .reveal h1 {
   font-size: 2.5em;
-  font-variant: small-caps; }
+  font-variant: small-caps;
+  margin-bottom: none; }
 
 .reveal h2 {
   font-size: 1.6em; }
@@ -172,7 +173,8 @@ body {
 .reveal table td {
   text-align: left;
   padding: 0.2em 0.5em 0.2em 0.5em;
-  border-bottom: 1px solid; }
+  border-bottom: 1px solid;
+  font-size: 25px; }
 
 .reveal table th[align="center"],
 .reveal table td[align="center"] {

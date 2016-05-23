@@ -53,7 +53,7 @@
 <section id="introducció" class="level1">
 <h1>Introducció</h1>
 <p><strong>Descripció</strong>: Tots els projectes necessitaran grans volums de logs, de tipus diferents, per posar a prova els seus sistemes. Aquest és un projecte al servei de la resta per facilitar aquesta generació massiva de logs.</p>
-<p><strong>Objectiu</strong>: Generació massiva de logs</p>
+<p><strong>Objectiu</strong>: Generació massiva de logs.</p>
 </section>
 <section id="eines-utilitzades" class="level1">
 <h1>Eines utilitzades</h1>
@@ -71,7 +71,7 @@
 <h1>Primers passos</h1>
 <section id="què-són-els-logs" class="level2">
 <h2>Què són els logs?</h2>
-<p>Són registres oficials del sistema, responen a les 5 W.</p>
+<p>Són registres oficials del sistema, usualment responen a les 5 W.</p>
 <ul>
 <li><strong>W</strong>ho</li>
 <li><strong>W</strong>hat</li>
@@ -80,29 +80,59 @@
 <li><strong>W</strong>hy</li>
 </ul>
 <figure>
-<img src="log.png" alt="logs" /><figcaption>logs</figcaption>
+<img src="images/log.png" />
 </figure>
 </section>
 <section id="tipus-de-logs" class="level2">
 <h2>Tipus de logs</h2>
-<ul>
-<li>Debug</li>
-<li>Info</li>
-<li>Notice</li>
-<li>Warning</li>
-<li>Warn</li>
-<li>Err</li>
-<li>Error</li>
-<li>Crit</li>
-<li>Alert</li>
-<li>Emerg</li>
-<li>Panic</li>
-</ul>
+<p>Segons la seva prioritat es poden classificar en 8 graus:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Nivell</th>
+<th style="text-align: left;">Tipus</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">Emergency</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Alert</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Critical</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Error</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Warning</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Notice</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Informational</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Debug</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="syslog-i-journal" class="level2">
 <h2>Syslog i Journal</h2>
-<p>Abans, en els sistemes l'eina utilitzada per registrar i visualitzar els logs era <strong>syslog</strong>.</p>
-<p>Actualment, amb l'arribada de <em>systemd</em>, l'eina més utilitzada és <strong>journalct</strong>. Com que el sistema que hem fet servir es Fedora 20 em centraré en el <strong>journal</strong> per tot el desenvolupament del projecte.</p>
+<p>Abans, als sistemes l'eina utilitzada per registrar i visualitzar els logs era <strong>syslog</strong>.</p>
+<p>Actualment, amb l'arribada de <em>systemd</em>, l'eina més utilitzada és <strong>journalctl</strong>. Com que el sistema que hem fet servir es Fedora 20 em centraré en el <strong>journal</strong> per tot el desenvolupament del projecte.</p>
 </section>
 <section id="generar-logs" class="level2">
 <h2>Generar logs</h2>
@@ -122,21 +152,42 @@
 <li>Peticions massives [ab i wget]</li>
 </ul>
 </section>
+<section id="com-podem-veure-els-logs-generats" class="level2">
+<h2>Com podem veure els logs generats?</h2>
+<pre><code>$ journalctl -f</code></pre>
+</section>
 <section id="python" class="level2">
 <h2>Python</h2>
 <p>Gràcies als mòduls <strong>syslog</strong> y <strong>logging</strong>.</p>
+<figure>
+<img src="images/python.png" />
+</figure>
 </section>
 <section id="bash" class="level2">
 <h2>Bash</h2>
 <p>Fent ús de la utilitat <strong>logger</strong>.</p>
+<pre><code>$ logger -t log &quot;això és un log&quot;</code></pre>
 </section>
 <section id="services" class="level2">
 <h2>Services</h2>
-<p>Creant un servei al sistema mitjançant els scripts de Python o Bash.</p>
+<p>Creant serveis al sistema mitjançant els scripts de Python o Bash.</p>
+<pre><code>$ sudo systemctl start massivelog
+$ sudo systemctl start massivelogging</code></pre>
 </section>
 <section id="docker" class="level2">
 <h2>Docker</h2>
 <p>Creant containers amb un servei Apache actiu.</p>
+<figure>
+<img src="images/docker.png" />
+</figure>
+</section>
+<section id="com-funcionen" class="level2">
+<h2>Com funcionen?</h2>
+<p>Redirigeixen el port 80 de l'Apache cap a un port del sistema.</p>
+<p>Els logs dels fitxers <strong>access_log</strong> i <strong>error_log</strong> es mostren per <em>stdout</em>.</p>
+<pre><code>ln -sf /dev/stdout /var/log/httpd/acces_log
+ln -sf /dev/stderr /var/log/httpd/error_log</code></pre>
+<p>Aquesta sortida també es redirigeix al journalctl.</p>
 </section>
 <section id="peticions-massives-als-containers" class="level2">
 <h2>Peticions massives als containers</h2>
@@ -161,20 +212,31 @@
 <section id="conclusions-generals" class="level2">
 <h2>Conclusions generals</h2>
 <ul>
-<li>Aprendre a gestionar i treballar amb un respositori git</li>
+<li>He aprés a gestionar i treballar amb un repositori en <a href="https://github.com/alexsurfcasting/massivelogs">github</a></li>
 <li>Treballar en un entorn adequat</li>
 <li>Funcionament logs</li>
 <li>Generació logs</li>
 <li>Correcta documentació</li>
+<li>Crear presentacions amb pandoc</li>
 </ul>
 </section>
 <section id="opinió-personal" class="level2">
 <h2>Opinió personal</h2>
+<p>Segons la meva opinió, fer el projecte ha estat útil per:</p>
 <ul>
-<li>Aprende a desenvolupar-se</li>
-<li>Utilització d'eines i recursos apressos durant el cicle</li>
-<li>Creació de presentacions amb pandoc</li>
+<li>Aprende a desenvolupar-se sol davant una situació concreta</li>
+<li>Millorar i aprofundir en el conexeiment de les eines i recursos apresos durant el cicle</li>
+<li>Saber gestionar el temps per determinades tasques</li>
 </ul>
+</section>
+</section>
+<section id="the-end" class="level1">
+<h1>The End</h1>
+<section id="gràcies-per-la-vostra-atenció" class="level2">
+<h2>Gràcies per la vostra atenció</h2>
+</section>
+<section id="section" class="level2">
+<h2><img src="images/end.gif" /></h2>
 </section>
 </section>
 </div>
